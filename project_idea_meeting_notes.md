@@ -3,12 +3,12 @@
 ### Improved Project Idea
 * Application that crowdsources invention ideas
 * first phase
-..* users can submit ideas, a picture and short text block
-..* other users upvote or downvote ideas in a "tinder-like" application
+  * users can submit ideas, a picture and short text block
+  * other users upvote or downvote ideas in a "tinder-like" application
 * ideas move to second phase after enough upvotes (to be determined)
 * second phase
-..* ideas are annotated with longer description
-..* users can comment and elaborate on ideas
+  * ideas are annotated with longer description
+  * users can comment and elaborate on ideas
 
 ###Meeting Requirements
 * **Croudsourcing:** from crowd submitting ideas
