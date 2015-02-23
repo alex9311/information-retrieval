@@ -81,8 +81,43 @@ KISS - Design principle (Keep it simple, Stupid!). Each step in the process shou
 
 ####Evaluation and Success Metrics
 
-<H2>Execution Plan</H2>
+####Execution Plan
 Project execution plan (PEP) is a document that is prepared at the start of a project, in order to provide details about the project itself, its team members, their responsibilities and interconnection or integration of administrative and management procedures.
+#####Task list
+######Week 3
+- [ ] finalized idea (group)
+- [ ] practice/prepare pitch (Peter/Hao)
+- [ ] finalizing elaborating idea document (group)
+  - [ ] Relevance to course (Peter)
+  - [ ] Innovative and challenges (Miriam)
+  - [ ] Requirements specifications (gizem)
+  - [ ] UML design (Hao)
+  - [ ] planned eval and success metrics (mon/tues next week)
+  - [ ] Review document
+- [ ] bluemix server and git setup (Alex)
+- [ ] Maybe start on DB schema (Alex)
+- [ ] visuals and front end (picking css library, making user interface) (Miriam Gizem)
+- [ ] check out crowdflower, design what is necessary (Gizem, Miriam)
+- [ ] Check out Lucene (Peter Hao)
+
+######Week 4
+- [ ] build DB schema and implement, with php interface to update it
+- [ ] build functionality to upload pictures with text
+- [ ] functionality to login as human computation user
+- [ ] functionality to login as user
+- [ ] 
+
+#####Week 5
+
+#####Week 6
+- [ ] app ready for crowdflower usage
+
+#####Week7
+- [ ] user voting implementation
+
+#####Week 8
+- [ ] everything is done
+
 
 
 
