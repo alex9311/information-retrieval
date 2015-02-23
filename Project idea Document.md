@@ -24,7 +24,7 @@ Different because it only focuses on ideas. No direct help like standard Q&A. Im
 * Voting is done by the crowd
 * Sharing/advertizing is done by the crowd
 
-#####Original content (from first draft):
+#####Original Relevance content (from first draft):
 We are sending out an open call for the crowd to send in ideas. Creating a idea-crowdsourcing platform. Having the platform open for anyone brings a variety in quality of ideas contributed. This being the internet, you are inevitably vulnerable to people posting unwanted content such as spam or content that is sexual, hateful or otherwise offensive. To screen the ideas posted to our platform we use Crowdflower for content moderation. Crowdflower is a crowdsourcing platform where you can hire the crowd for a small fee to complete simple tasks that need reliable feedback.
 
 The ideas will be stored in a database with an ID attached to it. For each idea we parse the text attached to it, creating a dictionary where we connect words to IDs to make it possible to search the ideas and rank for relevance based on word relevance, popularity, date of creation. (This needs to be worked out in more detail). 
@@ -71,7 +71,7 @@ Also, the idea of ads was shot down by the professor, but I believe that if you 
 * Database tracks users own ideas and which ideas the user has been shown
 * Rank all ideas by likes
 
-#####Original content (from first draft):
+#####Original Requirements/Specifications content (from first draft):
 Scope reduced to mobile apps for project but possible to expand. Input limited to image + text. User can check the status of his idea or send it to friends so that they can vote. As someone votes, they immediately see the next idea, hopefully keeping them engaged to vote on more ideas. Platform language = English (possible to expand in future).
 
 User Profile should include: Ideas submitted (with status(number of votes, percentage)). Ideas they liked. Hidden: the ideas they voted down, so they don't have the same ideas popping up.
