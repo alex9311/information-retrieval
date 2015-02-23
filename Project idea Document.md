@@ -6,27 +6,77 @@
 <p>Gizem Koçkesen</p>
 <p>Alex Simes</p>
 
-<H2>Pitch/Introduction</H2>
+####Pitch/Introduction
 Imagine this, you walk around and you have a great idea! Well, great! But you do not have the resources or expertise to grow this idea to its full potential. We have the solution for you: The Idea Tree. The idea tree is a web application which offers a ground for you to plant your seed and let others water and nurture it and grow it into a beautiful project. Just like an actual tree, you will be able to implement, kill, branch, grow and truncate your ideas. Think about it as a Github for ideas. 
 
 Different because it only focuses on ideas. No direct help like standard Q&A. Important is to enable an idea to grow. Finding out how it grows. How to enable a crowd for an idea. 
 
-<H2>Information Retrieval</H2>
+####Relevance to Course
+#####Human Computation
+* Sanitation check on images/text that are submitted, before the idea item goes into the public pool
+* Sanitation check on IR result for similar idea, before the idea item goes into the public pool
+
+#####Information Retrieval
+* Finding similar ideas in the public pool to a new ideas
+
+#####Crowdsourcing
+* Ideas are submitted by the crowd
+* Voting is done by the crowd
+* Sharing/advertizing is done by the crowd
+
+#####Original content (from first draft):
 We are sending out an open call for the crowd to send in ideas. Creating a idea-crowdsourcing platform. Having the platform open for anyone brings a variety in quality of ideas contributed. This being the internet, you are inevitably vulnerable to people posting unwanted content such as spam or content that is sexual, hateful or otherwise offensive. To screen the ideas posted to our platform we use Crowdflower for content moderation. Crowdflower is a crowdsourcing platform where you can hire the crowd for a small fee to complete simple tasks that need reliable feedback.
 
 The ideas will be stored in a database with an ID attached to it. For each idea we parse the text attached to it, creating a dictionary where we connect words to IDs to make it possible to search the ideas and rank for relevance based on word relevance, popularity, date of creation. (This needs to be worked out in more detail). 
 
-<H2>Motivating the Crowd and Monetization</H2>
+####Innovative and Challenging Nature of Project
+#####Innovative ideas
+* Gives unskilled individuals an opportunity to make money from a small ideas, through the crowd
+* Mobile app companies have validated ideas for products
+
+#####Challenges
+* There are many different components that need to work together seamlessly
+* Getting distict ideas can be challenging  
+* Keep users involved and contributing, getting the user to feel invested in an idea
+
+####Motivating the Crowd and Monetization
 The possibility to sell the ideas to companies was mentioned. I prefer the idea of being more involved in the execution of the idea. With the site open to use and view by anyone nothing is stopping companies from getting the ideas for free. With something as intangible as an idea it is near impossible to claim rights on it. I think the best way to monetize and have the site be sustainable is to find people skilled to implement the idea and start a kickstarter to collect funds. Fact is that a lot of kickstarter projects don't reach their target. When starting a kickstarter campaign for a idea from our platform however we already have contributors and people invested in the idea who might be interested to donate and spread the word about the project. People that have contributed ideas to the project can then eventually receive a percentage of the revenue created when the product is on the market (for mobile apps at least its easy to get something in an app store).
 
 Also, the idea of ads was shot down by the professor, but I believe that if you can show ads that are relevant and non-intrusive it is not a bad idea. For example, there is an popular idea to make a virtual pet dragon app. You can have a web-crawler search for a similar app that is already available (similar but most likely not exactly the same) and offer the makers of the app some adspace on the site. The ad would be relevant to what the user is looking at. The idea on the site can still be elaborated on and might turn into something quite different.
 
-<H2>Requirements and Specifications</H2>
+####Requirements and Specifications
+#####Use Case
+* first phase
+  * "crowd" can submit ideas for mobile apps, a picture and short text block
+  * The picture goes through a sanitation check, this is the human computation aspect
+  * text goes through IR system to find similar ideas (humans check IR results)
+    * if an idea is listed as similar by IR, human gets notification that the idea may be rejected later
+  * When idea gets out of screening state, user is notified either way
+  * After the idea is out of the screening state, users can share the idea
+  * Once the idea is past screening, it goes into the public pool
+  *  "crowd" upvote or downvote ideas that are in the public pool in a "tinder-like" application style
+  * This can be worked in a different type of application, use as "in between screen" which people see between pages
+* ideas move to second phase after enough upvotes (to be determined)
+* second phase
+  * ideas are clearly defined by in-house experts
+  * investors and mobile app companies are paired up to create the idea
+  * low risk, low profit margin business model
+  * users who submitted orignal idea gets percentage
+
+#####Other Specifications
+* Users can log in with facebook
+* There is a 140 character limit on idea text block
+* The application is in english only, ideas included
+* Responsive design to allow for mobile devices
+* Database tracks users own ideas and which ideas the user has been shown
+* Rank all ideas by likes
+
+#####Original content (from first draft):
 Scope reduced to mobile apps for project but possible to expand. Input limited to image + text. User can check the status of his idea or send it to friends so that they can vote. As someone votes, they immediately see the next idea, hopefully keeping them engaged to vote on more ideas. Platform language = English (possible to expand in future).
 
 User Profile should include: Ideas submitted (with status(number of votes, percentage)). Ideas they liked. Hidden: the ideas they voted down, so they don't have the same ideas popping up.
 
-<H2>UML Design</H2>
+####UML Design
 KISS - Design principle (Keep it simple, Stupid!). Each step in the process should be as easy as possible for the user.
 
 Phase 1:
