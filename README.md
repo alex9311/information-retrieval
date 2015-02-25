@@ -32,7 +32,7 @@ I haven't gone through this tutorial myself and neither has Peter but it should 
   * cd - moves around directories 
     * "cd /var/www/html/alex" will go to my home directory
     * "cd ../" will go up one level
-  * mkdir <<dir name>>- makes a directory with the name given
+  * mkdir dir_name - makes a directory with the name given
 * If you are super uncomfortable editing files in the console, you can edit them locally and push the changes to git. Then you just have to pull the latest version onto your folder on the server when you want to see them on the site
 
 #####set up git
