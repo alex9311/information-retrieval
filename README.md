@@ -1,4 +1,5 @@
 ### TUD-Information-Retrieval-Group-02
+Alex, Gizem, Hao, Miriam, and Peter
 
 ####Setting up development environment
 Hey so I got the server up and running, now its time for you guys to try it out! Here are the steps explaining how to do that.
