@@ -38,7 +38,7 @@ I haven't gone through this tutorial myself and neither has Peter but it should 
 
 #####set up git
 I thought it would be a good idea to set up git with our development. You need to do a few things to get this to work though.
-* First, connect to the server and get to your directory (cd /var/www/html/<<your username>>)
+* First, connect to the server and get to your directory (cd /var/www/html/your_username)
 * run:  ssh-keygen -t rsa -C "example@examples.com" with your email you used for your git account
 * ssh-keygen -t rsa -C "example@example.com"
   * put your the email you used for git as the argument
