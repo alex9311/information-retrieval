@@ -47,11 +47,11 @@ I thought it would be a good idea to set up git with our development. You need t
 * click "add ssh key"
 * paste the long key you copied from your console earlier into the key section and put "IR server" or something as the name
 * save they key
+* you should now be able to run "git clone git@github.com:alex9311/TUD-Information-Retrieval-Group-02.git project" which will bring the current git repo of our project into your web folder
+  * Its probably not great to have this all in the web folder, but whatever
 * In your web directory (/var/www/html/username) run the following commands
   * git config user.email "exmaple@example.com"
   * git config user.name "Your Name"
-* you should now be able to run "git clone git@github.com:alex9311/TUD-Information-Retrieval-Group-02.git project" which will bring the current git repo of our project into your web folder
-  * Its probably not great to have this all in the web folder, but whatever
 
 #####git workflow
 still need to define the git workflow
