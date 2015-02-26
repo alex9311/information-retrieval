@@ -40,6 +40,7 @@ I haven't gone through this tutorial myself and neither has Peter but it should 
 I thought it would be a good idea to set up git with our development. You need to do a few things to get this to work though.
 * First, connect to the server and get to your directory (cd /var/www/html/<<your username>>)
 * run:  ssh-keygen -t rsa -C "example@examples.com" with your email you used for your git account
+* **copy the entire key that is printed to your clipboard**
 * sign onto git in your browser
 * go to settings (the gear in the top right)
 * go to "SSH keys" on the menu on the left
