@@ -43,7 +43,6 @@ I thought it would be a good idea to set up git with our development. You need t
 * sign onto git in your browser
 * go to settings (the gear in the top right)
 * go to "SSH keys" on the menu on the left
-* indicate that you want to accept all current keys 
 * click "add ssh key"
 * paste the long key you copied from your console earlier into the key section and put "IR server" or something as the name
 * save they key
