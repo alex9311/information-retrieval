@@ -73,4 +73,5 @@ I think it is best to create a new branch with your work in it. The way to do th
 * click "create pull request"
 * this will create a pull request, which is a request to the team to pull your changes in
   * this will allow another team member to look your changes over and then accept them to the master branch
+* once your branch is merged in, you can start over with the workflow for the next set of changes (with a new branch name)
 
