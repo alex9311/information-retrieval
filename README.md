@@ -51,10 +51,26 @@ I thought it would be a good idea to set up git with our development. You need t
 * paste the long key you copied from your console earlier into the key section and put "IR server" or something as the name
 * save the key
 * you should now be able to run "git clone git@github.com:alex9311/TUD-Information-Retrieval-Group-02.git project" which will bring the current git repo of our project into your web folder
-* In your web directory (/var/www/html/username) run the following commands
+* In your git project directory (/var/www/html/username/project) run the following commands
   * git config user.email "exmaple@example.com"
   * git config user.name "Your Name"
 
 #####git workflow
-still need to define the git workflow
+I think it is best to create a new branch with your work in it. The way to do this is
+* pull the latest version of master with
+  * git checkout master
+  * git pull
+* create a new branch and tell github about it
+  * git checkout -b "branch_name_describing_what_you_will_do"
+  * git push origin "branch_name_describing_what_you_will_do"
+    * make sure your branch names match
+* do your work
+  * git add .
+  * git commit -m "commit message describing what you did"
+  * git push
+* now you can go to the [git repo](https://github.com/alex9311/TUD-Information-Retrieval-Group-02) in your browser
+* select your branch from the branch dropdown
+* click "create pull request"
+* this will create a pull request, which is a request to the team to pull your changes in
+  * this will allow another team member to look your changes over and then accept them to the master branch
 
