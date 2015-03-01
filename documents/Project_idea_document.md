@@ -12,17 +12,38 @@ Imagine this, you walk around and you have a great idea! Well, great! But you do
 Different because it only focuses on ideas. No direct help like standard Q&A. Important is to enable an idea to grow. Finding out how it grows. How to enable a crowd for an idea. 
 
 ####Relevance to Course
-#####Human Computation
-* Sanitation check on images/text that are submitted, before the idea item goes into the public pool
-* Sanitation check on IR result for similar idea, before the idea item goes into the public pool
 
-#####Information Retrieval
-* Finding similar ideas in the public pool to a new ideas
+In order for any project to be relevant to the course the three main components of the course should be applicable within the project: crowdsourcing, information retrieval, and human computation. For Sparked all three elements can be found, first crowdsourcing will be discussed, then human computation and last information retrieval.
 
 #####Crowdsourcing
+
+Crowdsourcing is using the crowd to execute tasks for a platform, Sparked uses crowdsourcing in three differnt ways. The first way that the crowd is used is during generation of idea's, all idea's that have been submitted to spark have been created by the crowd. The seccond way that the crowd is utilized is during the voting phase, in order to find the best idea's the crowd can vote for idea's, the crowd therefore decides which idea is the best. Lastly advertisement and sharing is done by the crowd, induviduals can share their idea with the crowd and the crowd can then spread this idea. By directly linking to Sparked any idea that is shared is advertisement for Sparked.
+
+(remove after review)
 * Ideas are submitted by the crowd
 * Voting is done by the crowd
 * Sharing/advertizing is done by the crowd
+(remove after review)
+
+#####Information Retrieval
+
+Retrieving and comparing texts is part of information retrieval, within Sparked this is used to check the similarity between new idea's and existing idea's. Because the results of the similarity check are also verified by humans the check does not have to be very fast, however it does need to be very precise. The more precise the check the less faulty checks the humans have to execute. Possible problems with this is that while idea's are being processed new idea's are also submitted so these should also be checked against idea's that are not yet accepted or rejected.
+
+(remove after review)
+* Finding similar ideas in the public pool to a new ideas
+(remove after review)
+
+#####Human Computation
+
+For human computation to be present a project a humen needs to do a check that cannot be automated by a computer. Within sparked this is done in two ways during the sanitation check. First the images and text are checked if they do not contain malicious content, seccondly to check the results of the similarity check. Both these tasks can be done automatically to some degree, however in order to guarantee the quality of content that has been accepted by the system these are checked using human computation aswell.
+
+During the setup phase of Sparked human computation is used to generate an inital pool of idea's, these are used as an initial pool of idea's for voting.
+
+(remove after review)
+* Sanitation check on images/text that are submitted, before the idea item goes into the public pool
+* Sanitation check on IR result for similar idea, before the idea item goes into the public pool
+* Generating idea's (?)
+(remove after review)
 
 #####Original Relevance content (from first draft):
 We are sending out an open call for the crowd to send in ideas. Creating a idea-crowdsourcing platform. Having the platform open for anyone brings a variety in quality of ideas contributed. This being the internet, you are inevitably vulnerable to people posting unwanted content such as spam or content that is sexual, hateful or otherwise offensive. To screen the ideas posted to our platform we use Crowdflower for content moderation. Crowdflower is a crowdsourcing platform where you can hire the crowd for a small fee to complete simple tasks that need reliable feedback.
