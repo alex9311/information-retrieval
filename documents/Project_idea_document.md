@@ -45,10 +45,12 @@ During the setup phase of Sparked human computation is used to generate an inita
 * Generating idea's (?)
 (remove after review)
 
+(remove after review)
 #####Original Relevance content (from first draft):
 We are sending out an open call for the crowd to send in ideas. Creating a idea-crowdsourcing platform. Having the platform open for anyone brings a variety in quality of ideas contributed. This being the internet, you are inevitably vulnerable to people posting unwanted content such as spam or content that is sexual, hateful or otherwise offensive. To screen the ideas posted to our platform we use Crowdflower for content moderation. Crowdflower is a crowdsourcing platform where you can hire the crowd for a small fee to complete simple tasks that need reliable feedback.
 
 The ideas will be stored in a database with an ID attached to it. For each idea we parse the text attached to it, creating a dictionary where we connect words to IDs to make it possible to search the ideas and rank for relevance based on word relevance, popularity, date of creation. (This needs to be worked out in more detail). 
+(remove after review)
 
 ####Innovative and Challenging Nature of Project
 #####Innovative ideas
