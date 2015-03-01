@@ -23,6 +23,7 @@ Crowdsourcing is using the crowd to execute tasks for a platform, Sparked uses c
 * Ideas are submitted by the crowd
 * Voting is done by the crowd
 * Sharing/advertizing is done by the crowd
+
 (remove after review)
 
 #####Information Retrieval
@@ -31,6 +32,7 @@ Retrieving and comparing texts is part of information retrieval, within Sparked 
 
 (remove after review)
 * Finding similar ideas in the public pool to a new ideas
+
 (remove after review)
 
 #####Human Computation
@@ -43,6 +45,7 @@ During the setup phase of Sparked human computation is used to generate an inita
 * Sanitation check on images/text that are submitted, before the idea item goes into the public pool
 * Sanitation check on IR result for similar idea, before the idea item goes into the public pool
 * Generating idea's (?)
+
 (remove after review)
 
 (remove after review)
