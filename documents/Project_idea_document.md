@@ -12,22 +12,18 @@ Imagine this, you walk around and you have a great idea! Well, great! But you do
 Different because it only focuses on ideas. No direct help like standard Q&A. Important is to enable an idea to grow. Finding out how it grows. How to enable a crowd for an idea. 
 
 ####Relevance to Course
-#####Human Computation
-* Sanitation check on images/text that are submitted, before the idea item goes into the public pool
-* Sanitation check on IR result for similar idea, before the idea item goes into the public pool
-
-#####Information Retrieval
-* Finding similar ideas in the public pool to a new ideas
+In order for any project to be relevant to the course, the three main components of the course should be applicable within the project: crowdsourcing, information retrieval, and human computation. For Sparked, all three elements can be found. First crowdsourcing will be discussed, then human computation, and last information retrieval.
 
 #####Crowdsourcing
-* Ideas are submitted by the crowd
-* Voting is done by the crowd
-* Sharing/advertizing is done by the crowd
+Crowdsourcing is using the crowd to execute tasks for a platform. Sparked uses crowdsourcing in three different ways. The first way that the crowd is used is during generation of ideas. All ideas that have been submitted to Spark have been created by the crowd. The second way that the crowd is utilized is during the voting phase. In order to find the best ideas, the crowd can vote for ideas. Thus, the crowd decides which idea is the best. Lastly, advertisement and sharing is done by the crowd. Individuals can share their idea with the crowd and the crowd can then spread the idea. By directly linking to Sparked, any idea that is shared is advertisement for Sparked.
 
-#####Original Relevance content (from first draft):
-We are sending out an open call for the crowd to send in ideas. Creating a idea-crowdsourcing platform. Having the platform open for anyone brings a variety in quality of ideas contributed. This being the internet, you are inevitably vulnerable to people posting unwanted content such as spam or content that is sexual, hateful or otherwise offensive. To screen the ideas posted to our platform we use Crowdflower for content moderation. Crowdflower is a crowdsourcing platform where you can hire the crowd for a small fee to complete simple tasks that need reliable feedback.
+#####Information Retrieval
+Retrieving and comparing texts is part of information retrieval. Within Sparked, this is used to check the similarity between new ideas and existing ideas. The results of the similarity check are also verified by humans so the check does not have to be very fast, however it does need to be very precise. The more precise the IR checking system is, the less faulty checks the humans have to look over. Possible problems with this is that while ideas are being processed, new ideas are also submitted. This would mean new ideas should also be checked against ideas that are not yet accepted or rejected.
 
-The ideas will be stored in a database with an ID attached to it. For each idea we parse the text attached to it, creating a dictionary where we connect words to IDs to make it possible to search the ideas and rank for relevance based on word relevance, popularity, date of creation. (This needs to be worked out in more detail). 
+#####Human Computation
+For human computation to be present in our project, we need to use humans to do a task that cannot be automated by a computer. Within sparked, this is done in two ways during the sanitation check. First, the images and text are checked to see if they do not contain malicious content. Second, human computation is used to check the results of the similarity check. While both these tasks can be done automatically to some degree, in order to guarantee the quality of content that has been accepted by the system these are checked using human computation as well.
+
+During the setup phase of Sparked, human computation is used to generate an inital pool of idea's. These are used as an initial pool of ideas for voting.
 
 ####Innovative and Challenging Nature of Project
 #####Innovativeness
