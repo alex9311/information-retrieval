@@ -1,10 +1,6 @@
 <H1>Project Idea document</h1>
 
-<p>Peter van Buul</p>
-<p>Hao Dinh</p>
-<p>Miriam Doorn</p>
-<p>Gizem Koçkesen</p>
-<p>Alex Simes</p>
+We are group 2 in TU Delft's Information Retrieval course, otherwise known as "Sparked"! We have a cohesive group from many different backgrounds: Peter van Buul, Hao Dinh, Miriam Doorn, Gizem Koçkesen, and Alex Simes.
 
 ####Pitch/Introduction
 Imagine this, you walk around and you have a great idea! Well, great! But you do not have the resources or expertise to grow this idea to its full potential. We have the solution for you: The Idea Tree. The idea tree is a web application which offers a ground for you to plant your seed and let others water and nurture it and grow it into a beautiful project. Just like an actual tree, you will be able to implement, kill, branch, grow and truncate your ideas. Think about it as a Github for ideas. 
