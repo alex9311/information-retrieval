@@ -17,3 +17,12 @@
 * **Human Computing:** humans needs to do "appropriateness check" on picturs submitted in first phase
 * **Information Retrieval:** grouping and searching the idea pool. Plus we can show which ideas are trending. 
 * **Who is the client?:** companies willing to buy ideas from the second phase. 
+
+##notes from 3/2 meeting
+* need to add some personal info to the idea document
+* crowdflower not necessary, just need to understand technology
+  * need to update idea document to reflect that
+* should add a snippet about how our tool is used for market research
+  * this has an IR component
+  * doesnt change the app but shows that we could sell "market research reports"
+* we should look at dandilion.eu on blackboard for IR (maybe easier than lucene)
