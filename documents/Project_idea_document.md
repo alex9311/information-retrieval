@@ -40,7 +40,7 @@ The application has a wide possible user base, including both experienced and no
 #####b)	Functional Requirements
 The application functions in two phases; one for sharing and voting ideas and another for working on the implementation of the ideas. The main functional requirements in these phases are as follows:
 
-The text is structured as followed, the headers are the subobjectives of the application. The bullets depict the objective number between brackets with the corresponding requirement in text. These objective numbers can be found in apendix (XXXXXXXXXX).
+The text is structured as followed, the headers are the subobjectives of the application. The bullets depict the objective number between brackets with the corresponding requirement in text. These objective numbers can be found in appendix (XXXXXXXXXX).
 
 ######Easy accessible application
 *	(11) The system allows users to sign in using Facebook
