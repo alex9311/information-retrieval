@@ -89,21 +89,13 @@ This week, it will be critical to build a database schema. The schema is necessa
 By week 5, we want users to be able to log into the system and submit ideas (both photo and text). This will require database connectivity to the front end. It will also require a technology to make it easy to upload photos taken on a mobile devide to be uploaded to our web application.
 
 #####Week 6 goals
-By the end of week 6, we would like to have implemented out information retrieval system. This system needs to be able to find idea duplicates. 
-- remove the bullets below after integrating them into a text
-- [ ] app ready for crowdflower usage
-- [ ] the IR similarity check
-  - [ ] understanding lucene and implementing it
+By the end of week 6, we would like to have implemented out information retrieval system. This system needs to be able to find idea duplicates. We also want to set up our tasks on crowdflower and complete the tasks internally. This means we will not pay for the crowdflower service but will still learn how the system works.
 
 #####Week 7 goals
-- remove the bullets below after integrating them into a text
-- [ ] user voting implementation
-- [ ] finalize front end
-- [ ] having voting working
+During this week, we want to implement a user voting system. This means that users should be able to log in and view the ideas that in the public pool. When viewing the ideas, the user should be able to upvote the ideas her or she likes.
 
 #####Week 8 goals
-- remove the bullets below after integrating them into a text
-- [ ] everything is done
+Finalize front end and wrap up any remaining tasks!
 
 ####UML Design
 TODO: add UML diagram here
