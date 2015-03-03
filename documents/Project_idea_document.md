@@ -1,4 +1,4 @@
-##Project Idea document
+##Project Idea Document - Group 2
 ####Pitch/Introduction
 Ever had a GREAT application idea? A lot of us have had an idea for the next Facebook or Twitter, when you wake up, are traveling or even in late night sessions. But you did not have the time, money or expertise to grow this idea to its full potential. We have the solution for you: get it Sparked! The idea is all about ideas and provides the user opportunities to obtain some financial gains from their brilliant ideas, even though they have no proficiency in programming. 
 
@@ -40,7 +40,7 @@ The application has a wide possible user base, including both experienced and no
 #####b)	Functional Requirements
 The application functions in two phases; one for sharing and voting ideas and another for working on the implementation of the ideas. The main functional requirements in these phases are as follows:
 
-The text is structured as followed, the headers are the subobjectives of the application. The bullets depict the objective number between brackets with the corresponding requirement in text. These objective numbers can be found in appendix (XXXXXXXXXX).
+The text is structured as followed, the headers are the subobjectives of the application. The bullets depict the objective number between brackets with the corresponding requirement in text. These objective numbers can be found in appendix 1.
 
 ######Easy accessible application
 *	(11) The system allows users to sign in using Facebook
@@ -84,6 +84,8 @@ The first aspect of the project we put a lot of time into was designing and defi
 
 The second thing we have spent a lot of time in is setting up the development environment. We set up an Amazon web server running AMI. There is a basic LAMP (linux, apache, mysql, and php) stack running on it. We also have phpmyadmin running on the server which will make it much easier to manage our database. We have looked into different web application templates we will be able to leverage to speed our development but have not chosen one yet.
 
+See appendix 2 for our diagram of the execution plan
+
 #####Week 4 goals
 This week, it will be critical to build a database schema. The schema is necessary for almost the whole rest of the application to be developed. We also need to select what libraries or templates we are going to be developing with. 
 
@@ -100,7 +102,7 @@ During this week, we want to implement a user voting system. This means that use
 Finalize front end, prepare for the final presentation and wrap up any remaining tasks!
 
 ####UML Design
-TODO: add UML diagram here
+![uml diagram](idea_doc_resources/use_case.jpg)
 
 ####Evaluation and Success Metrics
 #####IR system evaluation
@@ -138,3 +140,10 @@ We are group 2 in TU Delft's Information Retrieval course, otherwise known as "S
 ######Alex Simes
 - Master student in Software Technology
 - Bachelors in Computer Science from University of California, Santa Barbara
+
+
+##Appendix
+####Appendix 1 - Goal Tree
+![goal tree](idea_doc_resources/goal_tree.jpg)
+####Appendix 2 - Task Tree
+![task-tree](idea_doc_resources/execution_plan.jpg)
