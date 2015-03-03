@@ -82,34 +82,34 @@ Project execution plan (PEP) is a document that is prepared at the start of a pr
 ####About us
 We are group 2 in TU Delft's Information Retrieval course, otherwise known as "Sparked"! We have a cohesive group from many different backgrounds: Peter van Buul, Hao Dinh, Miriam Doorn, Gizem Koçkesen, and Alex Simes.
 
-<br>**Peter van Buul**<br>
+**Peter van Buul**<br>
 - Master student Computer Science - Information Architecture (2nd year)
 - Finished his Bsc in Computer Science in Delft
 - Responsibilities: //Stuff
 - Wants to learn: Enterprise Software Architecture Design and Implementation
 
-<br>**Hao Dinh**<br>
+**Hao Dinh**<br>
 
 - Master student Systems Engineering, Policy Analysis and Management - Information Architecture (1st year)
 - Finished his Bsc in Technische Bestuurskunde in Delft
 - Responsibilities: //business side of applications
 - Wants to learn: Web-development and Software Project Management
 
-<br>**Miriam Doorn**<br>
+**Miriam Doorn**<br>
 
 - Master student Media and Knowledge Engineering
 - Finished her Bsc in Media and Knowledge Engineering in Delft
 - Responsibilities: //Stuff
 - Wants to learn: Human Computer Interaction and Information Management
 
-<br>**Gizem Kockesen**<br>
+**Gizem Kockesen**<br>
 
 - Master student Media Technology in Leiden University
 - Finished her Bsc in Information Systems in Geneva
 - Responsibilities: //Stuff
 - Wants to learn: Interactive technologies, multimedia applications
 
-<br>**Alex Simes**<br>
+**Alex Simes**<br>
 
 - Master student in Software Technology
 - Bachelors in Computer Science from University of California, Santa Barbara
