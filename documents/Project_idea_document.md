@@ -79,7 +79,18 @@ TODO: add UML diagram here
 
 ####Evaluation and Success Metrics
 #####IR system evaluation
-The IR system will be used to find similar ideas in the idea pool. The purpose of this is to keep duplicate ideas from being submitted. 
+The IR system will be used to find similar ideas in the idea pool. The purpose of this is to keep duplicate ideas from being submitted. This part of the application can be evaluated to see if the system correctly clusters similar ideas. The evaluation metrics that will be used for this are Precision and Recall:
+
+                             Precision: True Positives / (True Positives + False Positives)
+                             Recall:    True Positives / (True Positives + False Negatives)
+
+Each new idea will be compared to all the ideas that have been accepted. An idea is deemed too similar when a certain threshold is surpassed and will then be checked by a human. The precision measure in this case would denote how many ideas that were classified as similar are defined by a human computer to actually be similar. Recall would denote how many similar ideas from the pool of accepted ideas are recognized by the similarity check as similar. A false negative would be an idea from the pool that is similar but was not recognized as such.
+
+#####Human Computation Evaluation
+The human computation part of the system can be evaluated in terms of the quality of the executed tasks. In our case, this means checking how correctly the ideas were evaluated by humans. Each task can be executed by multiple people to evaluate the task output and thus ensure quality. If multiple people give different answers to the same task this could mean that the task was not defined clearly enough, that the task is inherently subjective or that the human computer didn't perform the task seriously.
+
+#####Determining Success
+The results of the evaluation mentioned above are one of the components that will determine the success of the system. The application should also work correctly according to the requirements. The number of people signing up is tracked, as well as the number of ideas submitted. We'll at first send out a link to friend, family and other students. First we can see how many people respond to our call and sign up to the site. We hope that from there people will share their ideas leading to more people signing up to vote. Success would be having a steady or rising number of people signing up. It is also important to see if users share their submitted ideas with their friends and whether that leads to an increase in votes.
 
 ###### About us
 We are group 2 in TU Delft's Information Retrieval course, otherwise known as "Sparked"! We have a cohesive group from many different backgrounds: Peter van Buul, Hao Dinh, Miriam Doorn, Gizem Koçkesen, and Alex Simes.
