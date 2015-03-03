@@ -31,8 +31,13 @@ There are several techniques we will implement to make participation in each ste
 Another challenge for our project is implementation. The project is made up of different components that have to work together seamlessly. We need to implement Facebook connectivity, a CrowdFlower pipeline, Database access using mySQL and compatibility with Dandelion, all while having our responsive website for the platform built using PHP and CSS as a base. Most of this will be invisible to the user, but integral to the functioning of the platform. We want to compare ideas for similarity using text analysis, to avoid multiple instances of the same idea. This can be difficult, because subtle differences in text can give widely different semantic meanings.
 
 ####Objectives
+The goal of Sparked is to be able to create apps that have a proven market. This can be divided into two sub-goals: 
 
-Blabla about objective tree can be found in appenxi 1.
+1. High quality web-app that gathers marketable ideas 
+2. Effecctive creation of marketable apps
+
+In the short timespan of the Information Retrieval course, it will not be possible to implement all the components. Therefor the decision has been made to focus only on the first sub-goal. This sub-goal has been worked out into 11 different requirements in a goal-tree (see appendix 1). 
+
 
 ####Requirements and Specifications
 #####User Characteristics
