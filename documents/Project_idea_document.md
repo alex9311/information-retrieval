@@ -1,6 +1,6 @@
 ##Project Idea document
 ####Pitch/Introduction
-Ever had a GREAT application idea? A lot of us have had an idea for the next Facebook or Twitter, when you wake up, are traveling or even in late night sessions. But you did not have the time, money or expertise to grow this idea to its full potential. We have the solution for you: get it Sparked! The idea is all about ideas and provides the user opportunities to gain some financial gains from their brilliant ideas, even though they have no profiency in programming. 
+Ever had a GREAT application idea? A lot of us have had an idea for the next Facebook or Twitter, when you wake up, are traveling or even in late night sessions. But you did not have the time, money or expertise to grow this idea to its full potential. We have the solution for you: get it Sparked! The idea is all about ideas and provides the user opportunities to gain some financial gains from their brilliant ideas, even though they have no proficiency in programming. 
 
 Interestingly, at the same time it is a market research tool at the same time, as it tracks and ranks popularity of the submitted ideas. Prototypes of the best ranked ideas will be developed and pitched to potential buyers or investors.Sparked will be an application that uses Crowd Sourcing, Human Computation and Information Retrieval to find the gems among the vast amount of ideas that users come up with. The focus during this course will be the first parts of the application, starting from the idea submission to the ranking of the ideas. The business part of Sparked will not be developed during the coming weeks. 
 
@@ -30,7 +30,7 @@ These days there are a lot of platforms that help people make their idea a reali
 #####Challenges
 There are several challenges in realizing our project. One of them is participation. For our project to be successful, we rely very much on the crowd participating in submitting ideas and voting for ideas. The incentive for a user to submit an idea will be the possibility to see the idea produced and sold, making money by receiving a percentage of the revenue the product generates. People get excited when they get an idea and want to share it, and get a response. Submitting an idea to our platform will give users the opportunity to see how their idea resonates with the crowd. Voting for ideas can be fun as well, as the user comes across a wide variety of ideas; unique, silly, useful or the exact opposite. We want our platform to have a sense of fun, dreams and endless possibilities. 
 
-There are several techniques we will implement to make participation in each step of the process as simple as possible. The users can login to our platform using a FaceBook login. Facebook is used ubiquitously. Through FaceBook, the user can easily share his or her idea with his or her friends, which will help in leading more people to our platform. We use responsive web design so that the platform is easily accessible from any device: pc, smartphone etc. For the voting process, we use a Tinder-like design, with users swiping right to upvote and left not to upvote. This design is easy to use and recognizable to a lot of people. The user who submitted an idea can see how well his idea is doing in the rankings, which will motivate the user to invite more people to vote on his idea. Another way to engage our user base could be to send weekly updates via email giving a personalized update on number of new ideas the user hasn't voted on yet and the ranking(s) of the idea(s) submitted by the user.
+There are several techniques we will implement to make participation in each step of the process as simple as possible. The users can login to our platform using a FaceBook login. Facebook is used ubiquitously. Through FaceBook, the user can easily share his or her idea with his or her friends, which will help in leading more people to our platform. We use responsive web design so that the platform is easily accessible from any device: pc, smartphone etc. For the voting process, we use a Tinder-like design, with users swiping right to up-vote and left not to up-vote. This design is easy to use and recognizable to a lot of people. The user who submitted an idea can see how well his idea is doing in the rankings, which will motivate the user to invite more people to vote on his idea. Another way to engage our user base could be to send weekly updates via email giving a personalized update on number of new ideas the user hasn't voted on yet and the ranking(s) of the idea(s) submitted by the user.
 
 Another challenge for our project is implementation. The project is made up of different components that have to work together seamlessly. We need to implement Facebook connectivity, a CrowdFlower pipeline, Database access using mySQL and compatibility with Lucene, all while having our responsive website for the platform built using PHP and CSS as a base. Most of this will be invisible to the user, but integral to the functioning of the platform. We want to compare ideas for similarity using text analysis, to avoid multiple instances of the same idea. This can be difficult, because subtle differences in text can give widely different semantic meanings. There are techniques to compare semantic similarity as well as syntactic similarity. We will need to test which method works best for what we need.
 
@@ -102,7 +102,18 @@ TODO: add UML diagram here
 
 ####Evaluation and Success Metrics
 #####IR system evaluation
-The IR system will be used to find similar ideas in the idea pool. The purpose of this is to keep duplicate ideas from being submitted. 
+The IR system will be used to find similar ideas in the idea pool. The purpose of this is to keep duplicate ideas from being submitted. This part of the application can be evaluated to see if the system correctly clusters similar ideas. The evaluation metrics that will be used for this are Precision and Recall:
+
+                             Precision: True Positives / (True Positives + False Positives)
+                             Recall:    True Positives / (True Positives + False Negatives)
+
+Each new idea will be compared to all the ideas that have been accepted. An idea is deemed too similar when a certain threshold is surpassed and will then be checked by a human. The precision measure in this case would denote how many ideas that were classified as similar are defined by a human computer to actually be similar. Recall would denote how many similar ideas from the pool of accepted ideas are recognized by the similarity check as similar. A false negative would be an idea from the pool that is similar but was not recognized as such.
+
+#####Human Computation Evaluation
+The human computation part of the system can be evaluated in terms of the quality of the executed tasks. In our case, this means checking how correctly the ideas were evaluated by humans. Each task can be executed by multiple people to evaluate the task output and thus ensure quality. If multiple people give different answers to the same task this could mean that the task was not defined clearly enough, that the task is inherently subjective or that the human computer didn't perform the task seriously.
+
+#####Determining Success
+The results of the evaluation mentioned above are one of the components that will determine the success of the system. The application should also work correctly according to the requirements. The number of people signing up is tracked, as well as the number of ideas submitted. We'll at first send out a link to friend, family and other students. First we can see how many people respond to our call and sign up to the site. We hope that from there people will share their ideas leading to more people signing up to vote. Success would be having a steady or rising number of people signing up. It is also important to see if users share their submitted ideas with their friends and whether that leads to an increase in votes.
 
 ####About us
 We are group 2 in TU Delft's Information Retrieval course, otherwise known as "Sparked"! We have a cohesive group from many different backgrounds: Peter van Buul, Hao Dinh, Miriam Doorn, Gizem Koçkesen, and Alex Simes.
@@ -114,19 +125,19 @@ We are group 2 in TU Delft's Information Retrieval course, otherwise known as "S
 
 ######Hao Dinh
 - Master student Systems Engineering, Policy Analysis and Management - Information Architecture (1st year)
-- Finished his Bsc in Technische Bestuurskunde in Delft
+- Finished his B.Sc. in Technische Bestuurskunde in Delft
 - Responsibilities: //business side of applications
 - Wants to learn: Web-development and Software Project Management
 
 ######Miriam Doorn
 - Master student Media and Knowledge Engineering
-- Finished her Bsc in Media and Knowledge Engineering in Delft
+- Finished her B.Sc. in Media and Knowledge Engineering in Delft
 - Responsibilities: //Stuff
 - Wants to learn: Human Computer Interaction and Information Management
 
 ######Gizem Kockesen
 - Master student Media Technology in Leiden University
-- Finished her Bsc in Information Systems in Geneva
+- Finished her B.Sc. in Information Systems in Geneva
 - Responsibilities: //Stuff
 - Wants to learn: Interactive technologies, multimedia applications
 
