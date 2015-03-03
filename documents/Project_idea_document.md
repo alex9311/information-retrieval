@@ -77,6 +77,25 @@ The application must provide an easy-to-use platform that is straightforward to 
 
 ####Execution Plan
 Project execution plan (PEP) is a document that is prepared at the start of a project, in order to provide details about the project itself, its team members, their responsibilities and interconnection or integration of administrative and management procedures.
+#####Summary of work so far
+The first aspect of the project we put a lot of time into was designing and defining our idea. It took a lot of conversation to really nail down what we wanted to do. 
+
+The second thing we have spent a lot of time in is setting up the development environment. We set up an Amazon web server running AMI. There is a basic LAMP (linux, apache, mysql, and php) stack running on it. We also have phpmyadmin running on the server which will make it much easier to manage our database. We have looked into different web application templates we will be able to leverage to speed our development but have not chosen one yet.
+
+#####Week 4 goals
+This week, it will be critical to build a database schema. The schema is necessary for almost the whole rest of the application to be developed. We also need to select what libraries or templates we are going to be developing with. 
+
+#####Week 5 goals
+By week 5, we want users to be able to log into the system and submit ideas (both photo and text). This will require database connectivity to the front end. It will also require a technology to make it easy to upload photos taken on a mobile devide to be uploaded to our web application.
+
+#####Week 6 goals
+By the end of week 6, we would like to have implemented out information retrieval system. This system needs to be able to find idea duplicates. We also want to set up our tasks on crowdflower and complete the tasks internally. This means we will not pay for the crowdflower service but will still learn how the system works.
+
+#####Week 7 goals
+During this week, we want to implement a user voting system. This means that users should be able to log in and view the ideas that in the public pool. When viewing the ideas, the user should be able to upvote the ideas her or she likes.
+
+#####Week 8 goals
+Finalize front end and wrap up any remaining tasks!
 
 ####UML Design
 TODO: add UML diagram here
@@ -116,45 +135,3 @@ We are group 2 in TU Delft's Information Retrieval course, otherwise known as "S
 - Bachelors in Computer Science from University of California, Santa Barbara
 - Responsibilities: //stuff
 - Wants to learn: quick web development for simple apps
-
-#####Task list
-######Week 3
-- [ ] finalized idea (group)
-- [ ] practice/prepare pitch (Peter/Hao)
-- [ ] finalizing elaborating idea document (group)
-  - [ ] Relevance to course (Peter)
-  - [ ] Innovative and challenges (Miriam)
-  - [ ] Requirements specifications (gizem)
-  - [ ] UML design (Hao)
-  - [ ] planned eval and success metrics (mon/tues next week)
-  - [ ] Review document
-- [ ] bluemix server and git setup (Alex)
-- [ ] Maybe start on DB schema (Alex)
-- [ ] visuals and front end (picking css library, making user interface) (Miriam Gizem)
-- [ ] check out crowdflower, design what is necessary (Gizem, Miriam)
-- [ ] Check out Lucene (Peter Hao)
-
-######Week 4
-- [ ] build DB schema and implement, with php interface to update it
-- [ ] build functionality to upload pictures with text
-- [ ] functionality to login as user
-
-#####Summary of work so far
-
-#####Week 5 deadlines
-- [ ] user be able to login and submit ideas that are stored
-  - [ ] be able to send out link to contribute
-  - [ ] have DB running, linked to front end
-
-#####Week 6 deadlines
-- [ ] app ready for crowdflower usage
-- [ ] the IR similarity check
-  - [ ] understanding lucene and implementing it
-
-#####Week7 deadlines
-- [ ] user voting implementation
-- [ ] finalize front end
-- [ ] having voting working
-
-#####Week 8 deadlines
-- [ ] everything is done
