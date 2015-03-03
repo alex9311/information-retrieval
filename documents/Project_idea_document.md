@@ -14,10 +14,14 @@ Crowdsourcing is using the crowd to execute tasks for a platform. Sparked uses c
 #####Information Retrieval
 Retrieving and comparing texts is part of information retrieval. Within Sparked, this is used to check the similarity between new ideas and existing ideas. The results of the similarity check are also verified by humans so the check does not have to be very fast, however it does need to be very precise. The more precise the IR checking system is, the less faulty checks the humans have to look over. Possible problems with this is that while ideas are being processed, new ideas are also submitted. This would mean new ideas should also be checked against ideas that are not yet accepted or rejected.
 
+An interesting opportunity that comes with Sparked is sense-making from the idea submissions and how they do in the crowd. In this era of big data, there is the challenge of gaining valuable insights from the mass of available data.
+
 #####Human Computation
 For human computation to be present in our project, we need to use humans to do a task that cannot be automated by a computer. Within sparked, this is done in two ways during the sanitation check. First, the images and text are checked to see if they do not contain malicious content. Second, human computation is used to check the results of the similarity check. While both these tasks can be done automatically to some degree, in order to guarantee the quality of content that has been accepted by the system these are checked using human computation as well.
 
 During the setup phase of Sparked, human computation is used to generate an initial pool of idea's. These are used as an initial pool of ideas for voting.
+
+The idea generation aspect of Sparked is also a sort of human computation. In contrast with the last two mentioned methods of using human computation, the humans in this case are not necessarily aware of their role.
 
 ####Innovative and Challenging Nature of Project
 #####Innovativeness
@@ -83,36 +87,31 @@ The IR system will be used to find similar ideas in the idea pool. The purpose o
 
 ####About us
 We are group 2 in TU Delft's Information Retrieval course, otherwise known as "Sparked"! We have a cohesive group from many different backgrounds: Peter van Buul, Hao Dinh, Miriam Doorn, Gizem Koçkesen, and Alex Simes.
-
-**Peter van Buul**<br>
+######Peter van Buul
 - Master student Computer Science - Information Architecture (2nd year)
 - Finished his Bsc in Computer Science in Delft
 - Responsibilities: //Stuff
 - Wants to learn: Enterprise Software Architecture Design and Implementation
 
-**Hao Dinh**<br>
-
+######Hao Dinh
 - Master student Systems Engineering, Policy Analysis and Management - Information Architecture (1st year)
 - Finished his Bsc in Technische Bestuurskunde in Delft
 - Responsibilities: //business side of applications
 - Wants to learn: Web-development and Software Project Management
 
-**Miriam Doorn**<br>
-
+######Miriam Doorn
 - Master student Media and Knowledge Engineering
 - Finished her Bsc in Media and Knowledge Engineering in Delft
 - Responsibilities: //Stuff
 - Wants to learn: Human Computer Interaction and Information Management
 
-**Gizem Kockesen**<br>
-
+######Gizem Kockesen
 - Master student Media Technology in Leiden University
 - Finished her Bsc in Information Systems in Geneva
 - Responsibilities: //Stuff
 - Wants to learn: Interactive technologies, multimedia applications
 
-**Alex Simes**<br>
-
+######Alex Simes
 - Master student in Software Technology
 - Bachelors in Computer Science from University of California, Santa Barbara
 - Responsibilities: //stuff
