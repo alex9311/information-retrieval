@@ -99,6 +99,10 @@ We are group 2 in TU Delft's Information Retrieval course, otherwise known as "S
 - Responsibilities: //Stuff
 - Wants to learn: Interactive technologies, multimedia applications
 **Alex Simes**
+- Master student in Software Technology
+- Bachelors in Computer Science from University of California, Santa Barbara
+- Responsibilities: //stuff
+- Wants to learn: quick web development for simple apps
 
 #####Task list
 ######Week 3
