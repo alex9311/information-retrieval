@@ -1,7 +1,4 @@
 <H1>Project Idea document</h1>
-
-We are group 2 in TU Delft's Information Retrieval course, otherwise known as "Sparked"! We have a cohesive group from many different backgrounds: Peter van Buul, Hao Dinh, Miriam Doorn, Gizem Koçkesen, and Alex Simes.
-
 ####Pitch/Introduction
 Ever had a GREAT application idea? A lot of us have had an idea for the next Facebook or Twitter, when you wake up, are traveling or even in late night sessions. But you did not have the time, money or expertise to grow this idea to its full potential. We have the solution for you: get it Sparked!. The idea is all about ideas and provides the user opportunities to gain some financial gains from their brilliant ideas, even though they have no profiency in programming. 
 
@@ -81,6 +78,31 @@ TODO: we need to add this
 
 ####Execution Plan
 Project execution plan (PEP) is a document that is prepared at the start of a project, in order to provide details about the project itself, its team members, their responsibilities and interconnection or integration of administrative and management procedures.
+
+###### About us
+We are group 2 in TU Delft's Information Retrieval course, otherwise known as "Sparked"! We have a cohesive group from many different backgrounds: Peter van Buul, Hao Dinh, Miriam Doorn, Gizem Koçkesen, and Alex Simes.
+
+**Peter van Buul**
+**Hao Dinh**
+- Master student Systems Engineering, Policy Analysis and Management - Information Architecture (1st year)
+- Finished his Bsc in Technische Bestuurskunde in Delft
+- Responsibilities: //business side of applications
+- Wants to learn: Web-development and Software Project Management
+**Miriam Doorn**
+- Master student Media and Knowledge Engineering
+- Finished her Bsc in Media and Knowledge Engineering in Delft
+- Responsibilities: //Stuff
+- Wants to learn: Human Computer Interaction and Information Management
+**Gizem Kockesen**
+- Master student Media Technology in Leiden University
+- Finished her Bsc in Information Systems in Geneva
+- Responsibilities: //Stuff
+- Wants to learn: Interactive technologies, multimedia applications
+**Alex Simes**
+- Master student in Software Technology
+- Bachelors in Computer Science from University of California, Santa Barbara
+- Responsibilities: //stuff
+- Wants to learn: quick web development for simple apps
 
 #####Task list
 ######Week 3
