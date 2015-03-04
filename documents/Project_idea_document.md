@@ -1,4 +1,4 @@
-##Project Idea document
+##Project Idea Document - Group 2
 ####Pitch/Introduction
 <<<<<<< HEAD
 Ever had a GREAT application idea? A lot of us had an idea for the next Facebook or Twitter, when you wake up, are traveling or even in late night sessions. But you did not have the time, money or expertise to grow this idea to its full potential. We have the solution for you: get it Sparked!. The idea is all about ideas and provides the user opportunities to gain some financial gains from their brilliant ideas, even though they have no profiency in programming. 
@@ -18,15 +18,15 @@ Interestingly, it is a market research tool at the same time, as it tracks and r
 In order for any project to be relevant to the course, the three main components of the course should be applicable within the project: crowdsourcing, information retrieval, and human computation. For Sparked, all three elements can be found. First crowdsourcing will be discussed, then human computation, and last information retrieval.
 
 #####Crowdsourcing
-Sparked uses crowdsourcing in three different ways. The first way that the crowd is used is during generation of ideas. All ideas that have been submitted to Spark have been created by the crowd. The second way that the crowd is utilized is during the voting phase. In order to find the best ideas, the crowd can vote for ideas. Thus, the crowd decides which idea is the best. Lastly, advertisement and sharing is done by the crowd. Individuals can share their idea with the crowd and the crowd can then spread the idea. By directly linking to Sparked, any idea that is shared is advertisement for Sparked.
+Sparked uses crowdsourcing in three different ways. The first way the crowd is called upon is for content generation. All ideas submitted to Spark have been created by the crowd. The second way we utilize the crowd is during the voting phase. The crowd can vote for ideas, creating a popularity ranking of ideas. Thus, the crowd decides which idea should be developed. Lastly, advertisement and sharing is done by the crowd. Individuals can share their idea with the crowd and the crowd can then spread the idea. By directly linking to Sparked, any idea that is shared is advertisement for Sparked.
 
 #####Information Retrieval
-Retrieving and comparing texts is part of information retrieval. Within Sparked, this is used to check the similarity between new ideas and existing ideas. The results of the similarity check, which will be ideas with high similarity, are also verified by humans. The check does not have to be very fast. The more accurate the IR checking system is (the more certain the system is about its output), the less human computation will be needed. Possible problems with this is that while ideas are being processed, new ideas are also submitted. This would mean new ideas should also be checked against ideas that are not yet accepted or rejected.
+Retrieving and comparing texts is part of information retrieval. Within Sparked, this is used to check the similarity between new ideas and existing ideas. The results of the automated similarity check will be a set of ideas with high similarity to the idea being checked. These results are then verified by humans. The check does not have to be very fast. The more accurate the automated similarity checking system is, the less human computation will be needed. Possible problems with this is that while ideas are being processed, new ideas are also submitted. This would mean new ideas should also be checked against ideas that are not yet accepted or rejected.
 
-An interesting opportunity that comes with Sparked is sense-making from the idea submissions and how they do in the crowd. In this era of big data, there is the challenge of gaining valuable insights from the mass of available data.
+An interesting opportunity that comes with Sparked is sense-making from the idea submissions and how they do in the crowd. Looking at the voting behaviour of the users over time, preferences and trends can be detected. In this era of big data, there is the challenge of gaining valuable insights from the mass of available data.
 
 #####Human Computation
-For human computation to be present in our project, we need to use humans to do a task that cannot be automated by a computer. Within Sparked, this is done in two ways during the content check. First, the images and text are checked to see if they do not contain malicious content. Second, human computation is used to check the results of the similarity check. While both these tasks can be done automatically to some degree, in order to guarantee the quality of content that has been accepted by the system these are checked using human computation as well. For the checking for malicious content you could use the results from the human computation as a training set for a Pattern Recognition system to automatically label malicious content.
+Within Sparked, this is done in two ways during the content check. First, the images and text are checked to see if they do not contain malicious content. Second, human computation is used to check the results of the similarity check. Both these tasks can be done automatically to some degree. For the checking for malicious content you could use the results from the human computation as a training set for a Pattern Recognition system to automatically label malicious content. And the similarity check is only necessary if the automated part gives uncertain results. Human Computation is important to guarantee the quality of the content that is accepted by the system. 
 
 ####Innovative and Challenging Nature of Project
 #####Innovativeness
@@ -39,17 +39,25 @@ There are several techniques we will implement to make participation in each ste
 
 Another challenge for our project is implementation. The project is made up of different components that have to work together seamlessly. We need to implement Facebook connectivity, a CrowdFlower pipeline, Database access using mySQL and compatibility with Dandelion, all while having our responsive website for the platform built using PHP and CSS as a base. Most of this will be invisible to the user, but integral to the functioning of the platform. We want to compare ideas for similarity using text analysis, to avoid multiple instances of the same idea. This can be difficult, because subtle differences in text can give widely different semantic meanings.
 
+####Objectives
+The goal of Sparked is to be able to create apps that have a proven market. This can be divided into two sub-goals: 
+
+1. High quality web-app that gathers marketable ideas 
+2. Effecctive creation of marketable apps
+
+In the short timespan of the Information Retrieval course, it will not be possible to implement all the components. Therefor the decision has been made to focus only on the first sub-goal. This sub-goal has been worked out into 11 different requirements in a goal-tree (see appendix 1). 
+
 ####Requirements and Specifications
-#####a)	User Characteristics
+#####User Characteristics
 The application has a wide possible user base, including both experienced and non-experienced users.The general users that the application addresses are listed below:
 * Non-experienced User:	Average people with little or no expertise, time, or money. Uses the system to share ideas and/or vote on ideas.
 * Experienced User:	Individual with expertise in a specific field, who uses the system to take the ideas to the implementation level. They can be in-house experts who define the chosen ideas or developers hired by Sparked to create an application. They can also vote on ideas in our platform.
 * Investors/Companies:	Users who are looking for new ideas to get implemented and gain profit by funding and/or providing resources for it. They can also vote on ideas that they would like to get implemented.	
 
-#####b)	Functional Requirements
+#####Functional Requirements
 The application functions in two phases; one for sharing and voting ideas and another for working on the implementation of the ideas. The main functional requirements in these phases are as follows:
 
-The text is structured as followed, the headers are the subobjectives of the application. The bullets depict the objective number between brackets with the corresponding requirement in text. These objective numbers can be found in appendix (XXXXXXXXXX).
+The text is structured as followed, the headers are the subobjectives of the application. The bullets depict the objective number between brackets with the corresponding requirement in text. These objective numbers can be found in appendix 1.
 
 ######Easy accessible application
 *	(11) The system allows users to sign in using Facebook
@@ -93,6 +101,8 @@ The first aspect of the project we put a lot of time into was designing and defi
 
 The second thing we have spent a lot of time in is setting up the development environment. We set up an Amazon web server running AMI. There is a basic LAMP (linux, apache, mysql, and php) stack running on it. We also have phpmyadmin running on the server which will make it much easier to manage our database. We have looked into different web application templates we will be able to leverage to speed our development but have not chosen one yet.
 
+See appendix 2 for our diagram of the execution plan
+
 #####Week 4 goals
 This week, it will be critical to build a database schema. The schema is necessary for almost the whole rest of the application to be developed. We also need to select what libraries or templates we are going to be developing with. 
 
@@ -109,7 +119,7 @@ During this week, we want to implement a user voting system. This means that use
 Finalize front end, prepare for the final presentation and wrap up any remaining tasks!
 
 ####UML Design
-TODO: add UML diagram here
+![uml diagram](idea_doc_resources/use_case.jpg)
 
 ####Evaluation and Success Metrics
 #####IR system evaluation
@@ -124,26 +134,34 @@ Each new idea will be compared to all the ideas that have been accepted. An idea
 The human computation part of the system can be evaluated in terms of the quality of the executed tasks. In our case, this means checking how correctly the ideas were evaluated by humans. Each task can be executed by multiple people to evaluate the task output and thus ensure quality. If multiple people give different answers to the same task this could mean that the task was not defined clearly enough, that the task is inherently subjective or that the human computer didn't perform the task seriously.
 
 #####Determining Success
-The results of the evaluation mentioned above are one of the components that will determine the success of the system. The application should also work correctly according to the requirements. The number of people signing up is tracked, as well as the number of ideas submitted. We'll at first send out a link to friend, family and other students. First we can see how many people respond to our call and sign up to the site. We hope that from there people will share their ideas leading to more people signing up to vote. Success would be having a steady or rising number of people signing up. It is also important to see if users share their submitted ideas with their friends and whether that leads to an increase in votes.
+The results of the evaluation mentioned above are one of the components that will determine the success of the system. The application should also work correctly according to the requirements. The number of people signing up is tracked, as well as the number of ideas submitted. We'll at first send out a link to friends, family and other students. First we can see how many people respond to our call and sign up to the site. We hope that from there people will share their ideas leading to more people signing up to vote. Success would be having a steady or rising number of people signing up. It is also important to see if users share their submitted ideas with their friends and whether that leads to an increase in votes.
 
 ####About us
-We are group 2 in TU Delft's Information Retrieval course, otherwise known as "Sparked"! We have a cohesive group from many different backgrounds: Peter van Buul, Hao Dinh, Miriam Doorn, Gizem Koçkesen, and Alex Simes.
-######Peter van Buul
+We are group 2 in TU Delft's Information Retrieval course, otherwise known as "Sparked"! We have a cohesive group from many different backgrounds:
+
+**Peter van Buul**
 - Master student Computer Science - Information Architecture (2nd year)
 - Finished his Bsc in Computer Science in Delft
 
-######Hao Dinh
+**Hao Dinh**
 - Master student Systems Engineering, Policy Analysis and Management - Information Architecture (1st year)
 - Finished his B.Sc. in Technische Bestuurskunde in Delft
 
-######Miriam Doorn
+**Miriam Doorn**
 - Master student Media and Knowledge Engineering
 - Finished her B.Sc. in Media and Knowledge Engineering in Delft
 
-######Gizem Kockesen
+**Gizem Kockesen**
 - Master student Media Technology in Leiden University
 - Finished her B.Sc. in Information Systems in Geneva
 
-######Alex Simes
+**Alex Simes**
 - Master student in Software Technology
 - Bachelors in Computer Science from University of California, Santa Barbara
+
+
+##Appendix
+####Appendix 1 - Goal Tree
+![goal tree](idea_doc_resources/goal_tree.jpg)
+####Appendix 2 - Task Tree
+![task-tree](idea_doc_resources/execution_plan.jpg)
