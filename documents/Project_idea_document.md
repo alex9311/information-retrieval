@@ -121,23 +121,23 @@ The results of the evaluation mentioned above are one of the components that wil
 
 ####About us
 We are group 2 in TU Delft's Information Retrieval course, otherwise known as "Sparked"! We have a cohesive group from many different backgrounds:
-######Peter van Buul
+**Peter van Buul**
 - Master student Computer Science - Information Architecture (2nd year)
 - Finished his Bsc in Computer Science in Delft
 
-######Hao Dinh
+**Hao Dinh**
 - Master student Systems Engineering, Policy Analysis and Management - Information Architecture (1st year)
 - Finished his B.Sc. in Technische Bestuurskunde in Delft
 
-######Miriam Doorn
+**Miriam Doorn**
 - Master student Media and Knowledge Engineering
 - Finished her B.Sc. in Media and Knowledge Engineering in Delft
 
-######Gizem Kockesen
+**Gizem Kockesen**
 - Master student Media Technology in Leiden University
 - Finished her B.Sc. in Information Systems in Geneva
 
-######Alex Simes
+**Alex Simes**
 - Master student in Software Technology
 - Bachelors in Computer Science from University of California, Santa Barbara
 
