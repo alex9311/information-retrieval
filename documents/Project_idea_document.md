@@ -129,6 +129,7 @@ The results of the evaluation mentioned above are one of the components that wil
 
 ####About us
 We are group 2 in TU Delft's Information Retrieval course, otherwise known as "Sparked"! We have a cohesive group from many different backgrounds:
+
 **Peter van Buul**
 - Master student Computer Science - Information Architecture (2nd year)
 - Finished his Bsc in Computer Science in Delft
