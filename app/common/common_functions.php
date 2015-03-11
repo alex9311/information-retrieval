@@ -27,7 +27,7 @@ echo '
       <header id="header" class="container">
         <!-- Logo -->
         <div id="logo">
-          <a href="index.html"> <img src="'.$app_directory.'/images/SparkedLogo2.png" /> </a>
+          <a href="'.$app_directory.'/index.php"> <img src="'.$app_directory.'/images/SparkedLogo2.png" /> </a>
         </div>
         <!-- Nav -->
         <nav id="nav">

@@ -19,7 +19,7 @@
         <!-- this is where the content will go -->
 
           <div class="row">
-            <div class="3u">
+            <div class="8u">
               <h2>Submit now!</h2>
               <div id="envelope">
                 <form action="" method="post">
