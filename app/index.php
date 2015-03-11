@@ -21,8 +21,8 @@
           </div>
           <div class="5u">
             <ul>
-              <li><a href="<?php echo $app_directory; ?>/pages/vote.php" class="button big icon fa-arrow-circle-right">Vote now!</a></li>
-              <li><a href="<?php echo $app_directory; ?>/pages/submit.php" class="button big icon fa-arrow-circle-left">Submit now!</a></li>
+              <li><a href="<?php echo $app_directory; ?>/pages/vote.php" class="button big icon fa-arrow-circle-right">Vote!</a></li>
+              <li><a href="<?php echo $app_directory; ?>/pages/submit.php" class="button big icon fa-arrow-circle-left">Submit!</a></li>
             </ul>
           </div>
         </div>
