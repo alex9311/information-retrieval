@@ -1,6 +1,6 @@
 <?php
 
-function print_header($app_directory){
+function print_imports($app_directory){
 	$library_directory = $app_directory."/libraries/html5up-verti";
 echo '
         <head>
@@ -19,5 +19,26 @@ echo '
                         <link rel="stylesheet" href="'.$library_directory.'/css/style-desktop.css" />
                 <!--[if lte IE 8]><link rel="stylesheet" href="'.$library_directory.'/css/ie/v8.css" /><![endif]-->
         </head>
+';
+}
+function print_header($app_directory){
+echo '
+    <div id="header-wrapper">
+      <header id="header" class="container">
+        <!-- Logo -->
+        <div id="logo">
+          <a href="index.html"> <img src="images/SparkedLogo2.png" /> </a>
+        </div>
+        <!-- Nav -->
+        <nav id="nav">
+          <ul>
+            <li><a href="'.$app_diectory.'/pages/vote.php">Vote</a></li>
+            <li><a href="'.$app_diectory.'/pages/submit.php">Submit</a>
+            <li><a href="#">Sucess Stories</a></li>
+            <li><a href="#">username</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
 ';
 }
