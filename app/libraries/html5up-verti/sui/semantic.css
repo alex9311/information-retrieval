@@ -8362,6 +8362,7 @@ img.ui.bordered.image {
 .ui.circular.images,
 .ui.circular.image {
   overflow: hidden;
+  border-color: black!important;
 }
 
 .ui.circular.images .image,
