@@ -8,16 +8,16 @@ echo '
                 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
                 <meta name="description" content="" />
                 <meta name="keywords" content="" />
-                <!--[if lte IE 8]><script src="/libraries/html5up-verti/css/ie/html5shiv.js"></script><![endif]-->
-                <script src="/libraries/html5up-verti/js/jquery.min.js"></script>
-                <script src="/libraries/html5up-verti/js/jquery.dropotron.min.js"></script>
-                <script src="/libraries/html5up-verti/js/skel.min.js"></script>
-                <script src="/libraries/html5up-verti/js/skel-layers.min.js"></script>
-                <script src="/libraries/html5up-verti/js/init.js"></script>
-                        <link rel="stylesheet" href="/libraries/html5up-verti/css/skel.css" />
-                        <link rel="stylesheet" href="/libraries/html5up-verti/css/style.css" />
-                        <link rel="stylesheet" href="/libraries/html5up-verti/css/style-desktop.css" />
-                <!--[if lte IE 8]><link rel="stylesheet" href="/libraries/html5up-verti/css/ie/v8.css" /><![endif]-->
+                <!--[if lte IE 8]><script src="'.$library_directory.'/css/ie/html5shiv.js"></script><![endif]-->
+                <script src="'.$library_directory.'/js/jquery.min.js"></script>
+                <script src="'.$library_directory.'/js/jquery.dropotron.min.js"></script>
+                <script src="'.$library_directory.'/js/skel.min.js"></script>
+                <script src="'.$library_directory.'/js/skel-layers.min.js"></script>
+                <script src="'.$library_directory.'/js/init.js"></script>
+                        <link rel="stylesheet" href="'.$library_directory.'/css/skel.css" />
+                        <link rel="stylesheet" href="'.$library_directory.'/css/style.css" />
+                        <link rel="stylesheet" href="'.$library_directory.'/css/style-desktop.css" />
+                <!--[if lte IE 8]><link rel="stylesheet" href="'.$library_directory.'/css/ie/v8.css" /><![endif]-->
         </head>
 ';
 }
