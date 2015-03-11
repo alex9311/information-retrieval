@@ -27,13 +27,13 @@ echo '
       <header id="header" class="container">
         <!-- Logo -->
         <div id="logo">
-          <a href="index.html"> <img src="images/SparkedLogo2.png" /> </a>
+          <a href="index.html"> <img src="'.$app_directory.'/images/SparkedLogo2.png" /> </a>
         </div>
         <!-- Nav -->
         <nav id="nav">
           <ul>
-            <li><a href="'.$app_diectory.'/pages/vote.php">Vote</a></li>
-            <li><a href="'.$app_diectory.'/pages/submit.php">Submit</a>
+            <li><a href="'.$app_directory.'/pages/vote.php">Vote</a></li>
+            <li><a href="'.$app_directory.'/pages/submit.php">Submit</a>
             <li><a href="#">Sucess Stories</a></li>
             <li><a href="#">username</a></li>
           </ul>
