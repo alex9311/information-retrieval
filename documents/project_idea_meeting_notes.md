@@ -26,3 +26,8 @@
   * this has an IR component
   * doesnt change the app but shows that we could sell "market research reports"
 * we should look at dandilion.eu on blackboard for IR (maybe easier than lucene)
+
+
+##notes from 3/11 meeting
+* header:
+  * submit, vote, username, success stories
