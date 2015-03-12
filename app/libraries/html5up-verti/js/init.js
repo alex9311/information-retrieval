@@ -5,14 +5,15 @@
 */
 
 (function($) {
-
+	var script = document.currentScript;
+var fullUrl = script.src;
 	skel.init({
 		reset: 'full',
 		breakpoints: {
-			'global':	{ range: '*', href: 'css/style.css' },
-			'desktop':	{ range: '737-', href: 'css/style-desktop.css', containers: 1200, grid: { gutters: 40 } },
-			'1000px':	{ range: '737-1200', href: 'css/style-1000px.css', containers: 960, grid: { gutters: 25 }, viewport: { width: 1080 } },
-			'mobile':	{ range: '-736', href: 'css/style-mobile.css', containers: '100%!', grid: { collapse: true, gutters: 20 }, viewport: { scalable: false } }
+			'global':	{ range: '*', href: fullUrl+'/../../css/style.css' },
+			'desktop':	{ range: '737-', href: fullUrl+'/../../css/style-desktop.css', containers: 1200, grid: { gutters: 40 } },
+			'1000px':	{ range: '737-1200', href: fullUrl+'/../../css/style-1000px.css', containers: 960, grid: { gutters: 25 }, viewport: { width: 1080 } },
+			'mobile':	{ range: '-736', href: fullUrl+'/../../css/style-mobile.css', containers: '100%!', grid: { collapse: true, gutters: 20 }, viewport: { scalable: false } }
 		},
 		plugins: {
 			layers: {

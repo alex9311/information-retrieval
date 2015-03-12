@@ -12,16 +12,14 @@
     <!-- Header -->
     <?php print_header($app_directory); ?>
     <!-- Main -->
-      <div id="main-wrapper">
-        <div class="container">
-          <div class="row">
-              <!-- Content -->
-                <div id="content">
-		<!-- this is where the content will go -->
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div id="main-wrapper">
+      <div class="container">
+        <!-- Content -->
+        <div id="content">
+        <!-- this is where the content will go -->
+
+        </div><!--content-->
+      </div><!--container-->
+    </div><!--main_wrapper-->
   </body>
 </html>
