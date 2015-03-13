@@ -5,6 +5,27 @@ echo $target_file.'<br>';
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "Sparked";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$sql = "your sql statment";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+
 if (!file_exists($target_dir)){
     echo 'Upload directory does not exist.';
 }
@@ -47,6 +68,17 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 	session_start();
+	
+if($_POST['formSubmit'] == "Submit")
+{	
+	$valueText = $_POST['text_description'];
+	$valueImage = $_POST['fileToUpload'];
+	
+	$sql = "INSERT INTO Idea (text_description, image) VALUES ('$valueText', 'valueImage')";
+	
+	
+}
+	
 	$_SESSION["POST"] = "success";
 	header("Location: upload_form.php");
 	exit();

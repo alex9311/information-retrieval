@@ -1,18 +1,3 @@
-<?php
-
-if($_POST['formSubmit'] == "Submit")
-{	
-	$valueText = $_POST['text_description'];
-	$valueImage = $_POST['image'];
-	
-	$sql = "INSERT INTO Idea (text_description, image) VALUES ('$valueText', 'valueImage')";
-	
-	
-}
-?>
-
-
-
 <!DOCTYPE HTML>
 <!--
   Verti by HTML5 UP
@@ -32,22 +17,29 @@ if($_POST['formSubmit'] == "Submit")
         <!-- Content -->
         <div id="content">
         <!-- this is where the content will go -->
-
+		 <?php
+            session_start();
+            if(strcmp($_SESSION['POST'], "success")==0){
+              echo "image successfully uploaded";
+            }
+            unset($_SESSION['POST']);
+          ?>
+          
           <div class="row">
             <div class="8u">
-              <h2>Submit now!</h2>
+              <h2>Submit an idea now!</h2>
               <div id="envelope">
-                <form action="submit.php" method="post">  		
+                <form action="file_upload.php" method="post" enctype="multipart/form-data">  		
 					<p>
 						<label> Username </label>
 							<input type="text" name="username">
 						<label> Description of Idea </label>
 							<textarea name="text_description" maxlength="140">
                             </textarea>
-						<label> Image (optional) </label>
-							<input type="file" name="image">
-						</p>
-						<p>
+            			<label> Select image to upload: </label>
+            				<input type="file" name="fileToUpload" id="fileToUpload">          				
+					</p>
+					<p>
 						<input type="submit" name="formSubmit" value="Submit">
 					</p>
                 </form>
