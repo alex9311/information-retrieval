@@ -1,3 +1,18 @@
+<?php
+
+if($_POST['formSubmit'] == "Submit")
+{	
+	$valueText = $_POST['text_description'];
+	$valueImage = $_POST['image'];
+	
+	$sql = "INSERT INTO Idea (text_description, image) VALUES ('$valueText', 'valueImage')";
+	
+	
+}
+?>
+
+
+
 <!DOCTYPE HTML>
 <!--
   Verti by HTML5 UP
@@ -22,23 +37,19 @@
             <div class="8u">
               <h2>Submit now!</h2>
               <div id="envelope">
-                <form action="" method="post">
-                  <label> First Name </label>
-                  <input type="text" name="firstname" width="100px;">
-
-                  <label> Last Name </label>
-                  <input type="text" name="lastname" width="100px;">
-
-                  <label> Email </label>
-                  <input type="text" name="email">
-
-                  <label> Username </label>
-                  <input type="text" name="username">
-
-                  <label> Password </label>
-                  <input type="password" name="password">
-                    
-                  <input type="submit" value="Submit" id="submit">
+                <form action="submit.php" method="post">  		
+					<p>
+						<label> Username </label>
+							<input type="text" name="username">
+						<label> Description of Idea </label>
+							<textarea name="text_description" maxlength="140">
+                            </textarea>
+						<label> Image (optional) </label>
+							<input type="file" name="image">
+						</p>
+						<p>
+						<input type="submit" name="formSubmit" value="Submit">
+					</p>
                 </form>
               </div><!--envelope-->
             </div><!--class 3u-->
