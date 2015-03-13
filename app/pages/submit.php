@@ -19,8 +19,8 @@
         <!-- this is where the content will go -->
           <?php
             session_start();
-            if(strcmp($_SESSION['POST'], "success")==0){
-              echo "image successfully uploaded";
+            if($_SESSION['POST']){
+              echo $_SESSION['POST']; 
             }
             unset($_SESSION['POST']);
           ?>
@@ -28,7 +28,7 @@
             <div class="8u">
               <h2>Submit an idea now!</h2>
               <div id="envelope">
-                <form action="file_upload.php" method="post" enctype="multipart/form-data">
+                <form action="add_idea.php" method="post" enctype="multipart/form-data">
 	          <p>
 		    <label> Username </label>
 		    <input type="text" name="username">
