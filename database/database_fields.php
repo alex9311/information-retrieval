@@ -27,7 +27,7 @@ $submitted_fields = array(
 $idea_fields = array(
 	"id INT(6) AUTO_INCREMENT NOT NULL", 
         "text_description VARCHAR(100)",
-        "image VARCHAR(30)",
+        "image VARCHAR(200)",
         "upvotes INT(6)",
 	"PRIMARY KEY (id)"
 );
