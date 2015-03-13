@@ -1,7 +1,7 @@
 <?php
 //this file handles new ideas being submitted 
 
-
+//only want to execute all these checks if we have a submission request
 if($_POST['formSubmit'] == "Submit"){	
 	//first figure out where the image will be stored and get file type
 	$target_dir = "/var/www/html/uploads/";
@@ -9,10 +9,10 @@ if($_POST['formSubmit'] == "Submit"){
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
+	//check to make sure the directory where we want to store the file exist and are writable
 	if (!file_exists($target_dir)){
 		return_to_submit_page('Upload directory does not exist, contant sys admin');
 	}
-
 	if(!is_writable($target_dir)) {
 		return_to_submit_page('Upload directory is not writable, contact sys admin.');
 	}
@@ -43,8 +43,9 @@ if($_POST['formSubmit'] == "Submit"){
 	    	return_to_submit_page("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
 	}
 
-	//try to move the image to the target directory
+	//now that we know the image is valid, actually try to move the image into the target directory
 	if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+		//if successful, add the idea to the database and return to the submit page!
 		insert_idea($_POST['text_description'],$target_file);
 		return_to_submit_page("success");
 	} else {
