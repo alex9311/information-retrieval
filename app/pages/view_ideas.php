@@ -26,20 +26,3 @@
     </div><!--main_wrapper-->
   </body>
 </html>
-<?php
-function select_query($sql,$conn){
-        if ($result = $conn->query($sql)){
-                if(mysqli_num_rows($result) > 0){
-                        return $result;
-                }else{
-                        echo "Sorry, your query returned no rows.";
-                        $conn->close();
-                        exit();
-                }
-        }else{
-                echo "Sorry, your query has no results";
-                $conn->close();
-                exit();
-        }
-}
-?>
