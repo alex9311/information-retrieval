@@ -32,6 +32,8 @@
 	          <p>
 		    <label> Username </label>
 		    <input type="text" name="username">
+		    <label> Title </label>
+		    <input type="text" name="title">
 	            <label> Description of Idea </label>
 	            <textarea name="text_description" maxlength="140"></textarea>
             	    <label> Select image to upload: </label>

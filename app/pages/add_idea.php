@@ -46,14 +46,14 @@ if($_POST['formSubmit'] == "Submit"){
 	//now that we know the image is valid, actually try to move the image into the target directory
 	if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 		//if successful in storing image, add the idea to the database and return to the submit page!
-		insert_idea($_POST['text_description'],$target_file);
+		insert_idea($_POST['title'],$_POST['text_description'],$target_file);
 		return_to_submit_page("Successfully added image to database!");
 	} else {
 		return_to_submit_page("Sorry, there was an error uploading your file.");
 	}
 }
 
-function insert_idea($valueText,$image_location){
+function insert_idea($title,$valueText,$image_location){
 	$servername = "localhost";
 	$username = "root";
 	$password = "root";
@@ -66,7 +66,7 @@ function insert_idea($valueText,$image_location){
     		die("Connection failed: " . $conn->connect_error);
 	}
 	//create query string from parameters
-        $sql = 'INSERT INTO Idea (text_description, image) VALUES ("'.$valueText.'", "'.$image_location.'")';
+        $sql = 'INSERT INTO Idea (title, text_description, image) VALUES ("'.$title.'", "'.$valueText.'", "'.$image_location.'")';
 
 	//and insert!
 	if ($conn->query($sql) === TRUE) {
