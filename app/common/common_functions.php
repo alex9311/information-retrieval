@@ -19,6 +19,9 @@ echo '
                         <link rel="stylesheet" href="'.$library_directory.'/css/style.css" />
                         <link rel="stylesheet" href="'.$library_directory.'/css/style-desktop.css" />
 		</noscript>
+                <link rel="stylesheet" href="'.$library_directory.'/css/votingPage.css" />
+                <link rel="stylesheet" href="'.$library_directory.'/sui/semantic.css" />
+                <script src="'.$library_directory.'/sui/semantic.js"></script>
                 <!--[if lte IE 8]><link rel="stylesheet" href="'.$library_directory.'/css/ie/v8.css" /><![endif]-->
         </head>
 ';
@@ -34,7 +37,7 @@ echo '
         <!-- Nav -->
         <nav id="nav">
           <ul>
-            <li><a href="'.$app_directory.'/pages/vote.php">Vote</a></li>
+            <li><a href="'.$app_directory.'/pages/vote.php?id=1">Vote</a></li>
             <li><a href="'.$app_directory.'/pages/submit.php">Submit</a>
             <li><a href="#">Sucess Stories</a></li>
             <li><a href="#">username</a></li>
