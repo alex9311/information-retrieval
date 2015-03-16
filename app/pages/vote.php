@@ -18,14 +18,15 @@
         <div id="content">
         <!-- this is where the content will go -->
           <div id="vote">
-		<?php $idea = get_idea($_GET["id"]);?>
-            <img class="ui large circular image" src="<?php echo substr($idea[3],13);?>">
-            <div class="ui large header" id="text"><?php echo $idea[2]; ?></div>
-            <p><?php echo $idea[1]; ?></p>
+		<?php if($_GET["upvote_id"]){ upvote_idea($_GET["upvote_id"]);}?>
+		<?php $idea = get_idea($_GET["id"]); ?>
+            <img class="ui large circular image" src="<?php echo substr($idea["image"],13);?>">
+            <div class="ui large header" id="text"><?php echo $idea["title"]; ?></div>
+            <p><?php echo $idea["text_description"]; ?></p>
             <div id="button_holder">
               <div class="ui buttons">
         
-                <a href="http://54.93.120.201/alex/project/app/pages/vote.php?id=<?php echo ((int)$_GET["id"])+1; ?>">
+                <a href="http://54.93.120.201/alex/project/app/pages/vote.php?id=<?php echo ((int)$_GET["id"])+1; ?>&upvote_id=<?php echo $_GET["id"];?>">
 		  <div class="ui positive button">Spark it!</div>
 		</a>
                 <div class="or"></div>
