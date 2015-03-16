@@ -6,7 +6,6 @@
 -->
 <html>
   <?php include "../common/common.php";?>
-  <?php include "../common/common_functions.php";?>
   <?php print_imports($app_directory); ?>
   <body class="no-sidebar">
     <!-- Header -->
@@ -28,7 +27,7 @@
             <div class="8u">
               <h2>Submit an idea now!</h2>
               <div id="envelope">
-                <form action="add_idea.php" method="post" enctype="multipart/form-data">
+                <form action="submit_functions.php" method="post" enctype="multipart/form-data">
 	          <p>
 		    <label> Username </label>
 		    <input type="text" name="username">

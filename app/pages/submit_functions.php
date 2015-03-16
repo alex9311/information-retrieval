@@ -1,4 +1,7 @@
 <?php
+
+include "../common/connect.php";
+
 //this file handles new ideas being submitted 
 
 //only want to execute all these checks if we have a submission request
@@ -54,17 +57,7 @@ if($_POST['formSubmit'] == "Submit"){
 }
 
 function insert_idea($title,$valueText,$image_location){
-	$servername = "localhost";
-	$username = "root";
-	$password = "root";
-	$dbname = "Sparked";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-    		die("Connection failed: " . $conn->connect_error);
-	}
+	$conn =  connect_db();
 	//create query string from parameters
         $sql = 'INSERT INTO Idea (title, text_description, image) VALUES ("'.$title.'", "'.$valueText.'", "'.$image_location.'")';
 
