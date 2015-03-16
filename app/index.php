@@ -6,7 +6,6 @@
 -->
 <html>
   <?php include "common/common.php";?>
-  <?php include "common/common_functions.php";?>
   <?php print_imports($app_directory); ?>
   <body class="no-sidebar">
     <!-- Header -->
