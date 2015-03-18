@@ -20,7 +20,7 @@
           </div><!--7u-->
           <div class="5u">
             <ul>
-              <li><a href="<?php echo $app_directory; ?>/pages/vote.php" class="button big icon fa-arrow-circle-right">Vote!</a></li>
+              <li><a href="<?php echo $app_directory; ?>/pages/vote.php?id=1" class="button big icon fa-arrow-circle-right">Vote!</a></li>
               <li><a href="<?php echo $app_directory; ?>/pages/submit.php" class="button big icon fa-arrow-circle-left">Submit!</a></li>
             </ul>
           </div><!--5u-->
