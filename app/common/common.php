@@ -19,7 +19,6 @@ echo '
                 <script src="'.$library_directory.'/js/jquery.min.js"></script>
                 <script src="'.$library_directory.'/js/jquery.dropotron.min.js"></script>
                 <script src="'.$library_directory.'/js/skel.min.js"></script>
-                <script src="'.$library_directory.'/js/skel-layers.min.js"></script>
                 <script src="'.$library_directory.'/js/init.js"></script>
 		<noscript>
                         <link rel="stylesheet" href="'.$library_directory.'/css/skel.css" />

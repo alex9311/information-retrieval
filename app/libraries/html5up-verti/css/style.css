@@ -141,7 +141,7 @@
 
 		header
 		{
-			margin: 0 0 2em 0;
+			margin: 0 0 0em 0;
 		}
 		
 			header h2, header h3
@@ -620,6 +620,8 @@
 
 	#logo
 	{
+		padding-top:.25em;
+		padding-bottom:.25em;
 		overflow: hidden;
 	}
 
