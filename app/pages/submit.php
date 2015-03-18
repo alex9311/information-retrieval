@@ -29,7 +29,7 @@
 		    <label> Title </label>
 		    <input type="text" name="title">
 	            <label> Description of Idea </label>
-	            <textarea name="text_description" maxlength="140"></textarea>
+	            <textarea name="text_description" maxlength="1000"></textarea>
             	    <label> Select image to upload: </label>
             	    <input type="file" name="fileToUpload" id="fileToUpload">          				
 	          </p>
