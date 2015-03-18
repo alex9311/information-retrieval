@@ -29,8 +29,6 @@
               <div id="envelope">
                 <form action="submit_functions.php" method="post" enctype="multipart/form-data">
 	          <p>
-		    <label> Username </label>
-		    <input type="text" name="username">
 		    <label> Title </label>
 		    <input type="text" name="title">
 	            <label> Description of Idea </label>

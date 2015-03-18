@@ -50,7 +50,6 @@ if($_POST['formSubmit'] == "Submit"){
 	if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
 		//if successful in storing image, add the idea to the database and return to the submit page!
 		insert_idea($_POST['title'],$_POST['text_description'],$target_file);
-		return_to_submit_page("Successfully added image to database!");
 	} else {
 		return_to_submit_page("Sorry, there was an error uploading your file.");
 	}
@@ -63,9 +62,9 @@ function insert_idea($title,$valueText,$image_location){
 
 	//and insert!
 	if ($conn->query($sql) === TRUE) {
-       		echo "New record created successfully";
+		return_to_submit_page("Successfully added image to database!");
        	} else {
-       		echo "Error: " . $sql . "<br>" . $conn->error;
+		return_to_submit_page("Error: " . $sql . "<br>" . $conn->error);
        	}
 }
 

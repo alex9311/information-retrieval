@@ -12,11 +12,6 @@ if(strcmp(trim($answer),"yes")!=0){
 	exit();
 }
 
-$sparked_servername = "localhost";
-$sparked_username = "root";
-$sparked_password = "root";
-$sparked_dbname = "Sparked";
-
 // Create connection
 $conn = new mysqli($sparked_servername, $sparked_username, $sparked_password, $sparked_dbname);
 // Check connection
