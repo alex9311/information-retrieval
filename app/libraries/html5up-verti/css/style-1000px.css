@@ -10,7 +10,7 @@
 
 	body
 	{
-		min-width: 960px;
+		//min-width: 960px;
 	}
 
 	body
@@ -76,7 +76,7 @@
 	
 	#main-wrapper
 	{
-		padding: 4em 0 4em 0;
+		padding: 0em 0 1em 0;
 	}
 	
 	#footer-wrapper

@@ -12,7 +12,7 @@
     <?php print_header($app_directory); ?>
     <!-- Banner -->
     <div id="banner-wrapper">
-      <div id="banner" class="box container">
+      <div id="banner" class="box ">
         <div class="row">
           <div class="7u">
             <h2>Spark your ideas!</h2>
@@ -25,7 +25,7 @@
             </ul>
           </div><!--5u-->
         </div><!--row-->
-      </div><!--box container-->
+      </div><!--box -->
     </div><!--banner-wrapper-->
     <div id="main-wrapper">
     </div>

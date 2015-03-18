@@ -1,0 +1,21 @@
+.vote_image{
+	display: block;
+    	margin-left: auto;
+    	margin-right: auto ;
+	padding-top:.5em;
+    	max-height:300px;
+	min-height:299px;
+	width:auto;
+}
+
+.header_logo{
+	height:50px;
+}
+
+#skel-layers-wrapper{
+	height:0;
+}
+
+#header-wrapper{
+	height:50px;
+}

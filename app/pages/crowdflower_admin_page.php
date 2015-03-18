@@ -13,7 +13,6 @@
     <?php print_header($app_directory); ?>
     <!-- Main -->
     <div id="main-wrapper">
-      <div class="container">
         <!-- Content -->
         <div id="content">
         <!-- this is where the content will go -->
@@ -39,7 +38,6 @@
 		</p>
 		</form>
         </div><!--content-->
-      </div><!--container-->
     </div><!--main_wrapper-->
   </body>
 </html>

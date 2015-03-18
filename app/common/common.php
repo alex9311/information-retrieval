@@ -19,7 +19,9 @@ echo '
                 <script src="'.$library_directory.'/js/jquery.min.js"></script>
                 <script src="'.$library_directory.'/js/jquery.dropotron.min.js"></script>
                 <script src="'.$library_directory.'/js/skel.min.js"></script>
+                <script src="'.$library_directory.'/js/skel-layers.min.js"></script>
                 <script src="'.$library_directory.'/js/init.js"></script>
+                <link rel="stylesheet" href="'.$app_directory.'/css/customizations.css" />
 		<noscript>
                         <link rel="stylesheet" href="'.$library_directory.'/css/skel.css" />
                         <link rel="stylesheet" href="'.$library_directory.'/css/style.css" />
@@ -35,10 +37,10 @@ echo '
 function print_header($app_directory){
 echo '
     <div id="header-wrapper">
-      <header id="header" class="container">
+      <header id="header" >
         <!-- Logo -->
         <div id="logo">
-          <a href="'.$app_directory.'/index.php"> <img src="'.$app_directory.'/images/SparkedLogo2.png" /> </a>
+          <a href="'.$app_directory.'/index.php"> <img class="header_logo" src="'.$app_directory.'/images/sparked_horizontal.png" /> </a>
         </div>
         <!-- Nav -->
         <nav id="nav">

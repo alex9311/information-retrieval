@@ -36,7 +36,7 @@ if($_POST['formSubmit'] == "Submit"){
 	    	return_to_submit_page("Sorry, file already exists.");
 	}
 	// Check file size
-	if ($_FILES["fileToUpload"]["size"] > 500000) {
+	if ($_FILES["fileToUpload"]["size"] > 10000000) {
 	    	$uploadOk = 0;
 	    	return_to_submit_page("Sorry, your file is too large.");
 	}

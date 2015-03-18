@@ -12,7 +12,6 @@
     <?php print_header($app_directory); ?>
     <!-- Main -->
     <div id="main-wrapper">
-      <div class="container">
         <!-- Content -->
         <div id="content">
         <!-- this is where the content will go -->
@@ -23,12 +22,10 @@
             }
             unset($_SESSION['POST']);
           ?>
-          <div class="row">
-            <div class="8u">
-              <h2>Submit an idea now!</h2>
-              <div id="envelope">
-                <form action="submit_functions.php" method="post" enctype="multipart/form-data">
-	          <p>
+	    <div id="submitting">
+              <h2 style="margin-left:.25em; margin-top: .25em;">Submit an idea now!</h2>
+              <form action="submit_functions.php" method="post" enctype="multipart/form-data">
+	        <p>
 		    <label> Title </label>
 		    <input type="text" name="title">
 	            <label> Description of Idea </label>
@@ -40,12 +37,9 @@
 		    <input type="submit" name="formSubmit" value="Submit">
 	          </p>
                 </form>
-              </div><!--envelope-->
-            </div><!--class 3u-->
-          </div><!--row-->
+	      </div>	 
 
         </div><!--content-->
-      </div><!--container-->
     </div><!--main_wrapper-->
   </body>
 </html>
