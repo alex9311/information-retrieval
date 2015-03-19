@@ -21,7 +21,8 @@ if ($conn->connect_error) {
 
 
 ///Dropping and creating all tables
-drop_table("Screening_results",$conn,false); 
+drop_table("Screening_results_lucene",$conn,false); 
+drop_table("Screening_results_crowdflower",$conn,false); 
 drop_table("Seen",$conn,false); 
 drop_table("Submitted",$conn,false); 
 drop_table("Idea",$conn,false); 
@@ -30,7 +31,8 @@ create_table("User",$user_fields,$conn,false);
 create_table("Idea",$idea_fields,$conn,false);
 create_table("Seen",$seen_fields,$conn,false);
 create_table("Submitted",$submitted_fields,$conn,false);
-create_table("Screening_results",$screening_results_fields,$conn,false);
+create_table("Screening_results_lucene",$screening_results_lucene_fields,$conn,false);
+create_table("Screening_results_crowdflower",$screening_results_crowdflower_fields,$conn,false);
 
 
 

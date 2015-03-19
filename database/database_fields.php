@@ -32,9 +32,18 @@ $idea_fields = array(
         "upvotes INT(6)",
 	"PRIMARY KEY (id)"
 );
-$screening_results_fields = array(
+$screening_results_lucene_fields = array(
 	"id INT(6) AUTO_INCREMENT NOT NULL", 
        	"id_idea INT(6) NOT NULL",
+	"reason VARCHAR(50)",
+	"accepted INT(2)",
+        "FOREIGN KEY (id_idea) REFERENCES Idea(id)",
+	"PRIMARY KEY (id)"
+);
+$screening_results_crowdflower_fields = array(
+	"id INT(6) AUTO_INCREMENT NOT NULL", 
+       	"id_idea INT(6) NOT NULL",
+	"reason VARCHAR(50)",
 	"accepted INT(2)",
         "FOREIGN KEY (id_idea) REFERENCES Idea(id)",
 	"PRIMARY KEY (id)"
