@@ -65,12 +65,36 @@ function insert_idea($title,$valueText,$image_location){
 
 	//and insert!
 	if ($conn->query($sql) === TRUE) {
-		//Hey Miriam, here is the id of the id that was just inserted:
+		//get the id of the idea that was just inserted
 		$new_idea_id = mysqli_insert_id($conn);
+		//send data to CrowdFlower job
+		$entry = array(  "created" => "" , "favorite_count" => "" , "id" => $new_idea_id , 
+						"image" => $clean_image_location , "lang" => "" , "retweet_count" => "" , 
+						"text" => "" , "text_description" => $clean_valueText , 
+						"title" => $clean_title ,"user" => "" );
+		sendToCrowdflower($entry);
+		
 		return_to_submit_page("Successfully added idea to database!");
        	} else {
 		return_to_submit_page("Error: " . $sql . "<br>" . $conn->error);
        	}
+}
+
+function sendToCrowdflower($entry){
+	$api_key = "vREt_GNtauNnKc3y1JXX";
+	$job_id = "705775";
+	$data = array("data" => $entry);
+	$payload = array("key" => $api_key, "unit" => $data);
+	$input = json_encode($payload);
+	$headers = array('Accept: application/json','Content-Type: application/json'); 
+	$url = "http://api.crowdflower.com/v1/jobs/$job_id/units.json?key=$api_key";
+	$ch = curl_init($url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
+	$response = curl_exec($ch);
+	curl_close($ch);
 }
 
 function return_to_submit_page($status){
