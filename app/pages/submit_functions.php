@@ -58,11 +58,16 @@ if($_POST['formSubmit'] == "Submit"){
 function insert_idea($title,$valueText,$image_location){
 	$conn =  connect_db();
 	//create query string from parameters
-        $sql = 'INSERT INTO Idea (title, text_description, image) VALUES ("'.$title.'", "'.$valueText.'", "'.$image_location.'")';
+	$clean_title=mysqli_real_escape_string($conn,$title);
+	$clean_valueText=mysqli_real_escape_string($conn,$valueText);
+	$clean_image_location=mysqli_real_escape_string($conn,$image_location);
+        $sql = 'INSERT INTO Idea (title, text_description, image) VALUES ("'.$clean_title.'", "'.$clean_valueText.'", "'.$clean_image_location.'")';
 
 	//and insert!
 	if ($conn->query($sql) === TRUE) {
-		return_to_submit_page("Successfully added image to database!");
+		//Hey Miriam, here is the id of the id that was just inserted:
+		$new_idea_id = mysqli_insert_id($conn);
+		return_to_submit_page("Successfully added idea to database!");
        	} else {
 		return_to_submit_page("Error: " . $sql . "<br>" . $conn->error);
        	}
