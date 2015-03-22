@@ -21,7 +21,7 @@
 		<?php $idea = get_idea($_GET["id"]); ?>
             <img class="ui large image vote_image" src="<?php echo substr($idea["image"],13);?>">
             <div class="ui large header" id="text"><?php echo $idea["title"]; ?></div>
-            <p><?php echo $idea["text_description"]; ?></p>
+            <div class="vote_descrip_text"><p><?php echo $idea["text_description"]; ?></p></div>
             <div id="vote_buttons" style="text-align:center;">
               <div class="ui buttons">
         

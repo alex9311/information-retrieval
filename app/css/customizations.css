@@ -20,3 +20,12 @@
 #header-wrapper{
 	height:50px;
 }
+
+.vote_descrip_text{
+	min-width:400px;
+	max-width:740px;
+	width:50%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom:.5em;
+}
