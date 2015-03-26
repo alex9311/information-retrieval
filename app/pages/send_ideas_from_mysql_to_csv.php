@@ -1,21 +1,15 @@
-
+<?php include "../common/connect.php"; ?>
 
 <?php
-
-        $servername = "localhost";
-        $username = "root";
-        $password = "root";
-        $dbname = "Sparked";
-
         // Create connection
-        $conn = new mysqli($servername, $username, $password, $dbname);
+        $conn = connect_db();
         // Check connection
         if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
         }
 
-	$sql = "SELECT id, text_description, image 
-			FROM Idea WHERE id NOT IN (SELECT id_idea from Screening_results)";
+	$sql = "SELECT id, text_description, title, image 
+			FROM Idea WHERE id NOT IN (SELECT id_idea from Screening_results_crowdflower)";
         if ($result = $conn->query($sql)){
                 if(!(mysqli_num_rows($result) > 0)){
                         echo "Sorry, your query returned no rows.";
@@ -31,11 +25,11 @@
 
 	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT']; // $_SERVER['HTTP_HOST']; //$_SERVER['DOCUMENT_ROOT']; 
 
-	$headers = array(  0 => "created" , 1 => "favorite_count" , 2 => "id" , 3 => "image" , 4 => "lang" , 5 => "retweet_count" , 6 => "text" , 7 => "text_description" , 8 => "user" );
+	$headers = array(  0 => "created" , 1 => "favorite_count" , 2 => "id" , 3 => "image" , 4 => "lang" , 5 => "retweet_count" , 6 => "text" , 7 => "text_description" , 8 => "title", 9 => "user" );
 	$fp = fopen("/var/www/html/uploads/".'jobdatasanch.csv', 'w');
 	fputcsv($fp, $headers);
 	while($row = $result->fetch_assoc()) {
-		$entry = array(  0 => "" , 1 => "" , 2 => $row["id"] , 3 => $row["image"] , 4 => "" , 5 => "" , 6 => "" , 7 => $row["text_description"] , 8 => "" );
+		$entry = array(  0 => "" , 1 => "" , 2 => $row["id"] , 3 => $row["image"] , 4 => "" , 5 => "" , 6 => "" , 7 => $row["text_description"] , 8 => $row["title"], 9 => "" );
 		fputcsv($fp, array_values($entry));
 	}
 	fclose($fp);
