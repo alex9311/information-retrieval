@@ -68,6 +68,7 @@ function insert_idea($title,$valueText,$image_location){
 		//get the id of the idea that was just inserted
 		$new_idea_id = mysqli_insert_id($conn);
 		//send data to CrowdFlower job
+		$clean_image_location = $_SERVER[HTTP_HOST]."/".substr($clean_image_location,14);
 		$entry = array(  "created" => "" , "favorite_count" => "" , "id" => $new_idea_id , 
 						"image" => $clean_image_location , "lang" => "" , "retweet_count" => "" , 
 						"text" => "" , "text_description" => $clean_valueText , 
@@ -93,7 +94,11 @@ function sendToCrowdflower($entry){
 	curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
+	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
 	$response = curl_exec($ch);
+	if ($response === FALSE) {
+		die("Curl failed: " . curl_error($ch));
+	}
 	curl_close($ch);
 }
 
