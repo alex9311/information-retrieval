@@ -13,7 +13,7 @@
     <!-- Header -->
     <?php print_header($app_directory); ?>
     <!-- Main -->
-    <div id="main-wrapper" style="padding-top:1em;">
+    <div id="main-wrapper" style="padding-top:1em;padding-left:1em;padding-right:1em;">
 	<h2 align="center">The Top Five Ideas on Sparked!</h2>
         <!-- Content -->
         <div id="content">

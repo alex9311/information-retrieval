@@ -27,9 +27,9 @@
               <form action="submit_functions.php" method="post" enctype="multipart/form-data">
 	        <p>
 		    <label> Title </label>
-		    <input type="text" name="title">
+		    <input type="text" name="title" style="max-width:700px;display: block;margin-left: auto;margin-right: auto;">
 	            <label> Description of Idea </label>
-	            <textarea name="text_description" maxlength="1000"></textarea>
+	            <textarea name="text_description" maxlength="1000" style="max-width:700px;display: block;margin-left: auto;margin-right: auto;"></textarea>
             	    <label> Select image to upload: </label>
             	    <input type="file" name="fileToUpload" id="fileToUpload">          				
 	          </p>
