@@ -9,6 +9,15 @@
 	width:auto;
 }
 
+.table#top-5-table, td {
+	border: 1px solid black;
+}
+
+.table#top-5-table, table {
+	max-width: 400px;
+ 	margin: 0px auto;
+}
+
 .header_logo{
 	height:50px;
 }
