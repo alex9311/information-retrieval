@@ -8,7 +8,9 @@ include "../common/connect.php";
 if($_POST['formSubmit'] == "Submit"){	
 	//first figure out where the image will be stored and get file type
 	$target_dir = "/var/www/html/uploads/";
-	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	$digits = 4;
+	$image_prefix = rand(pow(10, $digits-1), pow(10, $digits)-1);
+	$target_file = $target_dir . $image_prefix. basename($_FILES["fileToUpload"]["name"]);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
