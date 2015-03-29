@@ -54,10 +54,17 @@
         <parameter key="select_attributes_and_weights" value="false"/>
         <list key="specify_weights"/>
         <process expanded="true">
-          <operator activated="true" class="text:transform_cases" compatibility="6.1.000" expanded="true" height="60" name="Transform Cases" width="90" x="45" y="30">
+          <operator activated="true" class="text:tokenize" compatibility="6.1.000" expanded="true" height="60" name="Tokenize" width="90" x="45" y="30">
+            <parameter key="mode" value="non letters"/>
+            <parameter key="characters" value=".:"/>
+            <parameter key="language" value="English"/>
+            <parameter key="max_token_length" value="3"/>
+          </operator>
+          <operator activated="true" class="text:transform_cases" compatibility="6.1.000" expanded="true" height="60" name="Transform Cases" width="90" x="179" y="30">
             <parameter key="transform_to" value="lower case"/>
           </operator>
-          <connect from_port="document" to_op="Transform Cases" to_port="document"/>
+          <connect from_port="document" to_op="Tokenize" to_port="document"/>
+          <connect from_op="Tokenize" from_port="document" to_op="Transform Cases" to_port="document"/>
           <connect from_op="Transform Cases" from_port="document" to_port="document 1"/>
           <portSpacing port="source_document" spacing="0"/>
           <portSpacing port="sink_document 1" spacing="0"/>
