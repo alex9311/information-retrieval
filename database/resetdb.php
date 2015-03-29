@@ -34,6 +34,11 @@ create_table("Submitted",$submitted_fields,$conn,false);
 create_table("Screening_results_lucene",$screening_results_lucene_fields,$conn,false);
 create_table("Screening_results_crowdflower",$screening_results_crowdflower_fields,$conn,false);
 
+$files = glob('/var/www/html/uploads/*'); // get all file names
+foreach($files as $file){ // iterate files
+  if(is_file($file))
+    unlink($file); // delete file
+}
 
 
 function create_table($table_name,$fields,$conn,$verbal){
