@@ -33,18 +33,22 @@ function get_idea($idea_id){
 		while($foundid == false){
 			$sql = "Select id, title, text_description, image from Idea where id = ".$idea_id." LIMIT 1";
 			$result = execute_mysql($sql,$conn);
-			
-			// Check if idea has been accepted by the CrowdFlower sanitation check
-			$sql = "SELECT accepted FROM Screening_results_crowdflower WHERE id_idea = ".$idea_id;
-			$result2 = execute_mysql($sql,$conn);
-			if(mysqli_num_rows($results2) != 0){
-				$checkedbycf = $result2->fetch_assoc();
-				if($checkedbycf["accepted"]==1){
-					$foundid = true;
+			if(mysqli_num_rows($result)!=0){
+				// Check if idea has been accepted by the CrowdFlower sanitation check
+				$sql = "SELECT accepted FROM Screening_results_crowdflower WHERE id_idea = ".$idea_id;
+				$result2 = execute_mysql($sql,$conn);
+				if(mysqli_num_rows($results2)!=0){
+					$checkedbycf = $result2->fetch_assoc();
+					if($checkedbycf["accepted"]==1){
+						$foundid = true;
+					}
 				}
+			}else{
+				$foundid = true;
 			}
 			// If idea has not been accepted check the next idea;
 			$idea_id = $idea_id + 1;
+			}
 		} 
 	return $result->fetch_assoc();
 }
