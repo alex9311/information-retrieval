@@ -115,7 +115,7 @@ function sendToCrowdflower($entry){
 function return_to_submit_page($status){
 	session_start();
        	$_SESSION["POST"] = $status;
-       	header("Location: submit.php");
+       	header("Location: ../pages/submit.php");
        	exit();
 }
 ?>
