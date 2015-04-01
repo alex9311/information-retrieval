@@ -28,6 +28,7 @@ function get_idea($idea_id){
         if ($conn->connect_error) {
                 die("Connection failed: " . $conn->connect_error);
         }
+		$result = "";
 		$foundid = false;
 		while($foundid == false){
 			$sql = "Select id, title, text_description, image from Idea where id = ".$idea_id." LIMIT 1";
