@@ -88,11 +88,14 @@ function insert_idea($title,$valueText,$image_location){
 }
 
 function sendToCrowdflower($entry){
+	// CrowdFlower credentials
 	$api_key = "vREt_GNtauNnKc3y1JXX";
-	$job_id = "705775";
+	$job_id = "708236";
+	// Format the data to send
 	$data = array("data" => $entry);
 	$payload = array("key" => $api_key, "unit" => $data);
 	$input = json_encode($payload);
+	// Set up the cURL request
 	$headers = array('Accept: application/json','Content-Type: application/json'); 
 	$url = "http://api.crowdflower.com/v1/jobs/$job_id/units.json?key=$api_key";
 	$ch = curl_init($url);
@@ -101,6 +104,7 @@ function sendToCrowdflower($entry){
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $input);
 	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+	// Execute cURL request
 	$response = curl_exec($ch);
 	if ($response === FALSE) {
 		die("Curl failed: " . curl_error($ch));
