@@ -90,7 +90,7 @@ function insert_idea($title,$valueText,$image_location){
 function sendToCrowdflower($entry){
 	// CrowdFlower credentials
 	$api_key = "vREt_GNtauNnKc3y1JXX";
-	$job_id = "708236";
+	$job_id = "710019";
 	// Format the data to send
 	$data = array("data" => $entry);
 	$payload = array("key" => $api_key, "unit" => $data);

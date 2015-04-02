@@ -48,7 +48,7 @@ echo '
             <li><a href="'.$app_directory.'/pages/vote.php?id=1">Vote</a></li>
             <li><a href="'.$app_directory.'/pages/submit.php">Submit</a>
             <li><a href="'.$app_directory.'/pages/top_ideas.php">Top Five Ideas!</a>
-            <li><a href="#">Sucess Stories</a></li>
+            <li><a href="#">Success Stories</a></li>
             <li><a href="#">username</a></li>
           </ul>
         </nav>
