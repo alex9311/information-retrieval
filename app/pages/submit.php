@@ -24,7 +24,7 @@
           ?>
 	    <div id="submitting">
               <h2 style="margin-left:.25em; margin-top: .25em;" align="center">Submit an idea now!</h2>
-              <form action="submit_functions.php" method="post" enctype="multipart/form-data">
+              <form action="../page_functions/submit_functions.php" method="post" enctype="multipart/form-data">
 	        <p>
 		    <label> Title </label>
 		    <input type="text" name="title" style="max-width:700px;display: block;margin-left: auto;margin-right: auto;">

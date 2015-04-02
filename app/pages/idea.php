@@ -6,7 +6,7 @@
 -->
 <html>
   <?php include "../common/common.php";?>
-  <?php include "vote_functions.php";?>
+  <?php include "../page_functions/vote_functions.php";?>
   <?php print_imports($app_directory); ?>
   <body class="no-sidebar">
     <!-- Header -->
