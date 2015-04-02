@@ -2,8 +2,9 @@ These scripts were made to run from local host for evaluation purposes only to
 compare the quality of the similarity calculation of different services.
 
 Lucene: To run the scripts you first need to download Solr following the instructions
-on the website. Create a core named "Test" using the schema "schema_testset.xml"-file. The file 
-needs to be placed in de folder C:\solr-5.0.0\server\resources for solr to find it.
+on the website (lucene.apache.org/solr). Create a core named "Test" using the schema 
+"schema_testset.xml"-file. The file needs to be placed in de folder 
+C:\solr-5.0.0\server\resources for solr to find it.
 Add the data from the "Ideas_for_Mobile_Apps_TestSet_Lucene.csv"-file.
 After everything is set up running the script "rank_test_results_Lucene.php" from local host 
 gives you the output found in "test_results_Lucene.htm"
@@ -13,3 +14,29 @@ to do similarity checks. Since you only get a limited amount of units you need a
 to do the entire test set. The script fills half a similarity matrix in the file
 "Results_Dandelion.csv". Running the script "rank_test_results_Dandelion.php" from local host 
 gives you the output found in "test_results_Dandelion.htm".
+
+RapidMiner: To use RapidMiner you need to download the RapidMiner studio from rapidminer.com.
+In RapidMiner we compute the similarity of the data in the csv file using cosine similarity. 
+What the process does is the following:
+
+    Read CSV: loads and reads the csv file containing the data. Its output is connected to 
+		the exa (means example set) input of the next function.
+    Process Document: This is used for all kinds of text analysis. If you double click it, 
+		you will see that for now it only transforms the data case to lowercase. 
+		In the parameters of Process Document, you will see that the 
+		"create vector space" is checked and is created using TF-IDF. The output of 
+		Process Document is an example set going to the exa input of the next function.
+    Data to Similarity: This is where the similarity of each data in the file is computed 
+		using cosine similarity. The output "sim" outputs the similarity score and 
+		"exa" is the example set. In order to export the result with the similarity 
+		scores, both of those outputs must go to the corresponding inputs of the next 
+		function.
+    Similarity to Data: This is needed to convert the similarity scores to data so that it 
+		can be written on a file. Otherwise, you can only view the results inside 
+		Rapidminer. The output is an example set going to the next function.
+    Write Excel: This writes the example set that it received from the previous function onto 
+		an excel file. The output goes from the "thr" output to "res" (result).
+    Press the play button at the top to start the process.
+
+Running the script "rank_test_results_RapidMiner.php" from local host uses the RapidMiner output
+to rank the queries producing the tables in "test_results_RapidMiner.htm".
