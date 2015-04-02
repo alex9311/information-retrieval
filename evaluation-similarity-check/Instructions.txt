@@ -1,0 +1,15 @@
+These scripts were made to run from local host for evaluation purposes only to
+compare the quality of the similarity calculation of different services.
+
+Lucene: To run the scripts you first need to download Solr following the instructions
+on the website. Create a core named "Test" using the schema "schema_testset.xml"-file. The file 
+needs to be placed in de folder C:\solr-5.0.0\server\resources for solr to find it.
+Add the data from the "Ideas_for_Mobile_Apps_TestSet_Lucene.csv"-file.
+After everything is set up running the script "rank_test_results_Lucene.php" from local host 
+gives you the output found in "test_results_Lucene.htm"
+
+Dandelion: Running the script "Get_Similarity_From_Dandelion.php" sends requests to Dandelion
+to do similarity checks. Since you only get a limited amount of units you need a view days
+to do the entire test set. The script fills half a similarity matrix in the file
+"Results_Dandelion.csv". Running the script "rank_test_results_Dandelion.php" from local host 
+gives you the output found in "test_results_Dandelion.htm".
