@@ -11,7 +11,7 @@
     <!-- Header -->
     <?php print_header($app_directory); ?>
     <!-- Main -->
-    <div id="main-wrapper">
+    <div id="main-wrapper" style="padding-top:1em;">
         <!-- Content -->
         <div id="content">
         <!-- this is where the content will go -->
