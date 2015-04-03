@@ -22,11 +22,9 @@
 			if($_GET["upvote_id"]){ 
 				upvote_idea($_GET["upvote_id"]);
 			}
-			$idea = get_idea($_GET["previous_id"]); 
+			$idea = get_idea($_GET["previous_id"],$app_directory); 
+			print_idea_for_vote($idea);
 		?>
-            <img class="ui large image vote_image" src="<?php echo substr($idea["image"],13);?>">
-            <div class="ui large header" id="text"><?php echo $idea["title"]; ?></div>
-            <div class="vote_descrip_text"><p><?php echo $idea["text_description"]; ?></p></div>
             <div id="vote_buttons" style="text-align:center;">
               <div class="ui buttons">
         
