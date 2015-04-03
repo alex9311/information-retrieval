@@ -23,29 +23,13 @@ function upvote_idea($idea_id){
 }
 
 
-function get_idea($idea_id){
+function get_idea($previous_idea_id){
         $conn = connect_db();
-	$result = "";
-	$foundid = false;
-	while($foundid == false){
-		$sql = "Select id, title, text_description, image from Idea where id = ".$idea_id." LIMIT 1";
-		$result = execute_mysql($sql,$conn);
-		if(mysqli_num_rows($result)!=0){
-			// Check if idea has been accepted by the CrowdFlower sanitation check
-			$sql = "SELECT accepted FROM Screening_results_crowdflower WHERE id_idea = ".$idea_id;
-			$result2 = execute_mysql($sql,$conn);
-			if(mysqli_num_rows($result2)!=0){
-				$checkedbycf = $result2->fetch_assoc();
-				if($checkedbycf["accepted"]==1){
-					$foundid = true;
-				}
-			}
-		}else{
-			$foundid = true;
-		}
-		// If idea has not been accepted check the next idea;
-		$idea_id = $idea_id + 1;
-	}
+	$sql_fields	= "Select Idea.id, Idea.title, Idea.text_description, Idea.image ";
+	$sql_join 	= "from Idea inner join Screening_results_crowdflower on Screening_results_crowdflower.id_idea = Idea.id ";
+	$sql_where 	= "where Idea.id > ".$previous_idea_id." and Screening_results_crowdflower.accepted = 1 ORDER BY Idea.id ASC LIMIT 1";
+	$sql_full = $sql_fields.$sql_join.$sql_where;
+	$result = execute_mysql($sql_full,$conn);
 	return $result->fetch_assoc();
 }
 
