@@ -7,11 +7,13 @@ on the website (lucene.apache.org/solr). Create a core named "Test" using the sc
 C:\solr-5.0.0\server\resources for solr to find it.
 Add the data from the "Ideas_for_Mobile_Apps_TestSet_Lucene.csv"-file.
 After everything is set up running the script "rank_test_results_Lucene.php" from local host 
-gives you the output found in "test_results_Lucene.htm"
+gives you the output found in "test_results_Lucene.htm".
 
 Dandelion: Running the script "Get_Similarity_From_Dandelion.php" sends requests to Dandelion
-to do similarity checks. Since you only get a limited amount of units you need a view days
-to do the entire test set. The script fills half a similarity matrix in the file
+to do similarity checks. The credentials are connected to Miriam Doorn's account. Since you 
+only get a limited amount of units you need a few days to do the entire test set. If you set 
+'maximum execution time' to 10x the default in your 'php.ini'-file then the script will run 
+until you're out of units for the day. The script fills half a similarity matrix in the file
 "Results_Dandelion.csv". Running the script "rank_test_results_Dandelion.php" from local host 
 gives you the output found in "test_results_Dandelion.htm".
 
