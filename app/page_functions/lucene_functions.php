@@ -32,7 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 function get_similar_results_table($similar_results,$new_idea_id){
 	$similar_docs = $similar_results["response"]["docs"];
        	$more_similar_docs = $similar_results["moreLikeThis"][$new_idea_id]["docs"];
-	if(empty($similar_docs)){
+	$return_header = true;
+	foreach($more_similar_docs as $doc){
+                if($doc["score"]>1) {
+                        $return_header = false;
+                }
+        }
+	if(empty($similar_docs) || $return_header){
 		return '<h4 align="center">Your idea is completely unique!<\h4>';
 	}
 	$table = "";
@@ -42,13 +48,17 @@ function get_similar_results_table($similar_results,$new_idea_id){
 		$table .= "<tr>";
 		$table .= "<td>".$doc["title"]."</td>";
 		$table .= "<td>".$doc["text_description"]."</td>";
+		$table .= "<td>".$doc["score"]."</td>";
 		$table .= "</tr>";
 	}
        	foreach($more_similar_docs as $doc){
-		$table .= "<tr>";
-		$table .= "<td>".$doc["title"]."</td>";
-		$table .= "<td>".$doc["text_description"]."</td>";
-		$table .= "</tr>";
+		if($doc["score"]>1) {
+			$table .= "<tr>";
+			$table .= "<td>".$doc["title"]."</td>";
+			$table .= "<td>".$doc["text_description"]."</td>";
+			$table .= "<td>".$doc["score"]."</td>";
+			$table .= "</tr>";
+		}
 	}
        	$table .= "</table>";
 	return $table;
