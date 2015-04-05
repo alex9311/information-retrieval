@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	add_idea_lucene($idea_id,$idea_description,$idea_title);
 	$similar_results = find_similar_ideas($idea_id);
 	$similar_table = get_similar_results_table($similar_results,$idea_id);
-       	//delete_idea_lucene($idea_id);
+       	delete_idea_lucene($idea_id);
 	
 
 	$delete_placeholder = 'DELETE FROM Idea WHERE id = '.$idea_id;
@@ -104,9 +104,7 @@ function delete_idea_lucene($id){
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-type: text/xml'));
         curl_setopt($ch, CURLOPT_POSTFIELDS, '<delete><query>id:'.$id.'</query></delete>');
 
-	echo $ch."\n";
         $response = curl_exec($ch);
-	echo $response."\n";
         if ($response === FALSE || $response == "") {
                 die("Curl failed: " . curl_error($ch));
         }
