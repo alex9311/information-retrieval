@@ -7,7 +7,7 @@ foreach($argv as $csv_file){
 		$input_file = fopen($csv_file,"r");
 		while(! feof($input_file)){
   			$csv_obj = fgetcsv($input_file);
-			$this_app= $csv_obj[0].",".$csv_obj[2]."\n";
+			$this_app= str_replace(',','',$csv_obj[0]).",".str_replace(',','',$csv_obj[2])."\n";
 			fwrite($output_file, $this_app);
 		}
 		fclose($input_file);
