@@ -1,8 +1,16 @@
 <?php
 
-include "../common/connect.php";
+include "lucene_functions.php";
+
+
+insert_idea("freshness","the freshaest","");
+exit();
+
 
 //this file handles new ideas being submitted 
+if($_POST['formSubmit'] == "Check for Duplicates"){
+
+}
 
 //only want to execute all these checks if we have a submission request
 if($_POST['formSubmit'] == "Submit"){	
@@ -61,6 +69,7 @@ if($_POST['formSubmit'] == "Submit"){
 	}
 }
 
+
 function insert_idea($title,$valueText,$image_location){
 	$conn =  connect_db();
 	//create query string from parameters
@@ -79,9 +88,13 @@ function insert_idea($title,$valueText,$image_location){
 						"image" => $clean_image_location , "lang" => "" , "retweet_count" => "" , 
 						"text" => "" , "text_description" => $clean_valueText , 
 						"title" => $clean_title ,"user" => "" );
-		sendToCrowdflower($entry);
+		add_idea_lucene($new_idea_id,$clean_valueText,$clean_title);	
+		$similar_results = find_similar_ideas($new_idea_id);
+		$similar_table = get_similar_results_table($similar_results,$new_idea_id);
+		//sendToCrowdflower($entry);
+		//delete_idea_lucene($new_idea_id);
 		
-		return_to_submit_page("Successfully added idea to database!");
+		return_to_submit_page($similar_table."Successfully added idea to database!");
        	} else {
 		return_to_submit_page("Error: " . $sql . "<br>" . $conn->error);
        	}

@@ -38,7 +38,8 @@
 	          </p>
                 </form>
 	      </div>	 
-
+	<script>
+	</script>
         </div><!--content-->
     </div><!--main_wrapper-->
   </body>
