@@ -5,22 +5,47 @@ include "../common/connect.php";
 //add_idea_lucene("3","fresh2","2test fresh");
 //find_similar_ideas("3");
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  	$conn =  connect_db();
+        $sql = 'INSERT INTO Idea (title, text_description) VALUES ("", "")';
+        $conn->query($sql);
+	$idea_id = mysqli_insert_id($conn);
+
+	$idea_title 	=  $_POST["title"];
+	$idea_description =  $_POST["description"];
+
+
+	add_idea_lucene($idea_id,$idea_description,$idea_title);
+	$similar_results = find_similar_ideas($idea_id);
+	$similar_table = get_similar_results_table($similar_results,$idea_id);
+       	//delete_idea_lucene($idea_id);
+	
+
+	$delete_placeholder = 'DELETE FROM Idea WHERE id = '.$idea_id;
+        $conn->query($delete_placeholder);
+	$conn->close();
+
+	echo $similar_table;
+}
+
+
 function get_similar_results_table($similar_results,$new_idea_id){
 	$similar_docs = $similar_results["response"]["docs"];
        	$more_similar_docs = $similar_results["moreLikeThis"][$new_idea_id]["docs"];
+	if(empty($similar_docs)){
+		return '<h4 align="center">Your idea is completely unique!<\h4>';
+	}
 	$table = "";
-       	$table .= "<h3>Ideas Similar</h3>";
+       	$table .= '<h4 align="center">Ideas Similar</h4>';
        	$table .= '<table  border="1" cellpadding="10"  id="top-5-table">';
        	foreach($similar_docs as $doc){
 		$table .= "<tr>";
-		$table .= "<td>".$doc["id"]."</td>";
 		$table .= "<td>".$doc["title"]."</td>";
 		$table .= "<td>".$doc["text_description"]."</td>";
 		$table .= "</tr>";
 	}
        	foreach($more_similar_docs as $doc){
 		$table .= "<tr>";
-		$table .= "<td>".$doc["id"]."</td>";
 		$table .= "<td>".$doc["title"]."</td>";
 		$table .= "<td>".$doc["text_description"]."</td>";
 		$table .= "</tr>";

@@ -88,11 +88,7 @@ function insert_idea($title,$valueText,$image_location){
 						"image" => $clean_image_location , "lang" => "" , "retweet_count" => "" , 
 						"text" => "" , "text_description" => $clean_valueText , 
 						"title" => $clean_title ,"user" => "" );
-		add_idea_lucene($new_idea_id,$clean_valueText,$clean_title);	
-		$similar_results = find_similar_ideas($new_idea_id);
-		$similar_table = get_similar_results_table($similar_results,$new_idea_id);
-		//sendToCrowdflower($entry);
-		//delete_idea_lucene($new_idea_id);
+		sendToCrowdflower($entry);
 		
 		return_to_submit_page($similar_table."Successfully added idea to database!");
        	} else {
