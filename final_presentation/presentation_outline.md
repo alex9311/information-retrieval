@@ -4,12 +4,12 @@ Goal is 18 minutes.. plus minus 2
 
 ###Presentation Outline
 ####== Contextual == (4 minutes)
-1. **Introduction** [2 minutes]
+1. **Introduction** [2 minutes][Peter]
 - What is Sparked.. (with example).. Maybe back to pitch
 - Use the example of Angry Birds.. A great Idea can be a complete failure, and a seemingly bad or simple idea can make it too the top charts.. -- Flying birds knocking out green alien pigs?? 
 - So only getting the idea funded is weird, you need a piece of execution to this! Therefore it makes sense.. 
 
-2. **The market**? [2 minutes]
+2. **The market**? [2 minutes][Hao]
 - "The App economy is bigger than hollywood".
 - See the information about jobs and app economy. 
 - But several app funding approaches exist! Kickstarter, Indigogo, AppBackr, AppsFunder and AppStori (just show some screenshots and that is is booming. 
@@ -17,16 +17,29 @@ Goal is 18 minutes.. plus minus 2
 
 ####== Implementation == (8 minutes)
 3. **Crowdsourcing** [2 minutes]
+	- [Hao]
 4. **Human Computation** [2 minutes]
-5. **Information Retrieval** [2 minutes] 
+	- crowdflower [Miriam] [1 minute] 
+	- 1 slide: screenshot of the job
+	- CrowdFlower diagram 
+5. **Information Retrieval** [2 minutes]
+	- 1 slide for Dandelion
+	- 1 slide for RapidMiner
+	- 1 slide for Lucene
+	- 1 slide with formulas
+	- evaluation results [Miriam] - testset: 50 ideas where 10 were discribed in 5 different ways. 
 5. **Implementation** - Our stack/application [2 minutes] 
-	- Also showing external dependencies. 
+	- Also showing external dependencies. [Alex]
 
 ####== DEMO == [5 minutes]
-6. DEMO: + explenation on the similarity check results? [5 minutes]
+6. DEMO: + explenation on the similarity check results? [5 minutes][Gizem]
 
 ####== Ending Remarks == [1 minute]
-7. **Conclusions/Final Remarks** [1 minute]
+7. **Conclusions/Final Remarks** [1 minute][Peter]
+- How we can improve the application:
+	- We have a web-crawler, but not implemented
+	- improve the similarity check when you go in depth with the Lucene. Like customizing synonyms.
+	- User profiles and Log In and feedback on the similarity and status
 
 
 
