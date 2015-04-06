@@ -52,19 +52,17 @@ function get_similar_results_table($similar_results,$new_idea_id){
         $table .= "<td>Ratio</td>";
         $table .= "</tr>";
 
-       	if($score<$required_ratio) {
-	       	foreach($more_similar_docs as $doc){
-			$ratio = $doc["score"]/$score;
-			if($ratio>0.5) {
-				$table .= "<tr>";
-				$table .= "<td>".$doc["title"]."</td>";
-				$table .= "<td>".$doc["text_description"]."</td>";
-				$table .= "<td>".$doc["score"]."</td>";
-				$table .= "<td>".$ratio."</td>";
-				$table .= "</tr>";
-			}
+       	foreach($more_similar_docs as $doc){
+		$ratio = $doc["score"]/$score;
+		if($ratio>0.5) {
+			$table .= "<tr>";
+			$table .= "<td>".$doc["title"]."</td>";
+			$table .= "<td>".$doc["text_description"]."</td>";
+			$table .= "<td>".$doc["score"]."</td>";
+			$table .= "<td>".$ratio."</td>";
+			$table .= "</tr>";
 		}
-       	}
+	}
        	$table .= "</table>";
 	return $table;
 }
