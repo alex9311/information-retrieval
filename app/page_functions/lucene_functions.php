@@ -30,29 +30,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 function get_similar_results_table($similar_results,$new_idea_id){
-       	$more_similar_docs = $similar_results["moreLikeThis"][$new_idea_id]["docs"];
-	$return_header = true;
-	foreach($more_similar_docs as $doc){
-                if($doc["score"]>1) {
-                        $return_header = false;
-                }
-        }
-	if(empty($more_similar_docs) || $return_header){
-		return '<h4 align="center">Your idea is completely unique!</h4>';
-	}
 	$table = "";
-       	$table .= '<h4 align="center">Ideas Similar</h4>';
-       	$table .= '<table  border="1" cellpadding="10"  id="top-5-table">';
-       	foreach($more_similar_docs as $doc){
-		if($doc["score"]>1) {
-			$table .= "<tr>";
-			$table .= "<td>".$doc["title"]."</td>";
-			$table .= "<td>".$doc["text_description"]."</td>";
-			$table .= "<td>".$doc["score"]."</td>";
-			$table .= "</tr>";
+	if($similar_results["moreLikeThis"][$new_idea_id]["numFound"] != 0){
+		$more_similar_docs = $similar_results["moreLikeThis"][$new_idea_id]["docs"];
+		$table .= '<h4 align="center">Ideas Similar</h4>';
+		$table .= '<table  border="1" cellpadding="10"  id="top-5-table">';
+		$highestscore = $similar_results["moreLikeThis"][$new_idea_id]["docs"][0]["score"];
+		foreach($more_similar_docs as $doc){
+			if($doc["score"]/$highestscore > 0.5){
+				$table .= "<tr>";
+				$table .= "<td>".$doc["title"]."</td>";
+				$table .= "<td>".$doc["text_description"]."</td>";
+				$table .= "</tr>";
+			}
 		}
+		$table .= "</table>";
+	}else{
+		$table = "You are a unique snowflake with wonderful original ideas!";
 	}
-       	$table .= "</table>";
+       	
 	return $table;
 }
 
