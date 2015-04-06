@@ -35,6 +35,10 @@ function get_similar_results_table($similar_results,$new_idea_id){
 		$more_similar_docs = $similar_results["moreLikeThis"][$new_idea_id]["docs"];
 		$table .= '<h4 align="center">Ideas Similar</h4>';
 		$table .= '<table  border="1" cellpadding="10"  id="top-5-table">';
+		$table .= "<tr>";
+        	$table .= "<td>Title</td>";
+        	$table .= "<td>Description</td>";
+        	$table .= "</tr>";
 		$highestscore = $similar_results["moreLikeThis"][$new_idea_id]["docs"][0]["score"];
 		foreach($more_similar_docs as $doc){
 			if($doc["score"]/$highestscore > 0.5){
