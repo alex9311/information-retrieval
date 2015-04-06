@@ -30,25 +30,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 function get_similar_results_table($similar_results,$new_idea_id){
-	$similar_docs = $similar_results["response"]["docs"];
        	$more_similar_docs = $similar_results["moreLikeThis"][$new_idea_id]["docs"];
-	if(empty($similar_docs)){
-		return '<h4 align="center">Your idea is completely unique!<\h4>';
+	$return_header = true;
+	foreach($more_similar_docs as $doc){
+                if($doc["score"]>1) {
+                        $return_header = false;
+                }
+        }
+	if(empty($more_similar_docs) || $return_header){
+		return '<h4 align="center">Your idea is completely unique!</h4>';
 	}
 	$table = "";
        	$table .= '<h4 align="center">Ideas Similar</h4>';
        	$table .= '<table  border="1" cellpadding="10"  id="top-5-table">';
-       	foreach($similar_docs as $doc){
-		$table .= "<tr>";
-		$table .= "<td>".$doc["title"]."</td>";
-		$table .= "<td>".$doc["text_description"]."</td>";
-		$table .= "</tr>";
-	}
        	foreach($more_similar_docs as $doc){
-		$table .= "<tr>";
-		$table .= "<td>".$doc["title"]."</td>";
-		$table .= "<td>".$doc["text_description"]."</td>";
-		$table .= "</tr>";
+		if($doc["score"]>1) {
+			$table .= "<tr>";
+			$table .= "<td>".$doc["title"]."</td>";
+			$table .= "<td>".$doc["text_description"]."</td>";
+			$table .= "<td>".$doc["score"]."</td>";
+			$table .= "</tr>";
+		}
 	}
        	$table .= "</table>";
 	return $table;
@@ -82,8 +84,9 @@ function add_idea_lucene($id,$description,$title){
 
 function find_similar_ideas($id){
 	$url = "http://52.28.44.51:8983/solr/collection1/";
+	$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=text_description&mlt.fl=title&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=15&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
 	//$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=text_description&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=15&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
-	$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=text_description&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=455&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
+	//$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=text_description&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=455&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
 	$ch = curl_init($url.$query);
 	curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
 	curl_setopt($ch, CURLOPT_BINARYTRANSFER, true);
