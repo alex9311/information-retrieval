@@ -31,11 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 function get_similar_results_table($similar_results,$new_idea_id){
        	$more_similar_docs = $similar_results["moreLikeThis"][$new_idea_id]["docs"];
-	$score = $similar_results["response"]["docs"][0]["score"];
+	$score = $similar_results["moreLikeThis"][$new_idea_id]["docs"][0]["score"];
 	$return_header = true;
-	$required_ratio = 0.15;
+	$required_score = 0.15;
 	foreach($more_similar_docs as $doc){
-                if($doc["score"]/$score>$required_ratio) {
+                if($score>$required_ratio) {
                         $return_header = false;
                 }
         }
@@ -52,17 +52,19 @@ function get_similar_results_table($similar_results,$new_idea_id){
         $table .= "<td>Ratio</td>";
         $table .= "</tr>";
 
-       	foreach($more_similar_docs as $doc){
-		$ratio = $doc["score"]/$score;
-		if($ratio>$required_ratio) {
-			$table .= "<tr>";
-			$table .= "<td>".$doc["title"]."</td>";
-			$table .= "<td>".$doc["text_description"]."</td>";
-			$table .= "<td>".$doc["score"]."</td>";
-			$table .= "<td>".$ratio."</td>";
-			$table .= "</tr>";
+       	if($score<$required_ratio) {
+	       	foreach($more_similar_docs as $doc){
+			$ratio = $doc["score"]/$score;
+			if($ratio>0.5) {
+				$table .= "<tr>";
+				$table .= "<td>".$doc["title"]."</td>";
+				$table .= "<td>".$doc["text_description"]."</td>";
+				$table .= "<td>".$doc["score"]."</td>";
+				$table .= "<td>".$ratio."</td>";
+				$table .= "</tr>";
+			}
 		}
-	}
+       	}
        	$table .= "</table>";
 	return $table;
 }
