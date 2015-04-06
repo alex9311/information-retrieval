@@ -32,13 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 function get_similar_results_table($similar_results,$new_idea_id){
 	$similar_docs = $similar_results["response"]["docs"];
        	$more_similar_docs = $similar_results["moreLikeThis"][$new_idea_id]["docs"];
-	$return_header = true;
-	foreach($more_similar_docs as $doc){
-                if($doc["score"]>1) {
-                        $return_header = false;
-                }
-        }
-	if(empty($similar_docs) || $return_header){
+	if(empty($similar_docs)){
 		return '<h4 align="center">Your idea is completely unique!<\h4>';
 	}
 	$table = "";
@@ -103,7 +97,16 @@ function find_similar_ideas($id){
 	}
 	curl_close($ch);
 	$data = json_decode($response,true);
-	return $data;
+
+	$return_value = array();
+
+        foreach($data as $doc){
+                if($doc["score"]>1) {
+                        array_push($return_value, $doc);
+                }
+        }
+        
+	return $return_value;
 }
 
 
