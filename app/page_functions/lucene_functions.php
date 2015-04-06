@@ -31,12 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 function get_similar_results_table($similar_results,$new_idea_id){
        	$more_similar_docs = $similar_results["moreLikeThis"][$new_idea_id]["docs"];
-	$similar_docs = $similar_results["response"]["docs"];
-	//$doc = array_values($similar_docs)[0];
-	$score = 6;//$doc["score"];
+	$score = $similar_results["response"]["docs"][0]["score"];
 	$return_header = true;
+	$required_ratio = 0.15;
 	foreach($more_similar_docs as $doc){
-                if($doc["score"]/$score>0.1) {
+                if($doc["score"]/$score>$required_ratio) {
                         $return_header = false;
                 }
         }
@@ -55,7 +54,7 @@ function get_similar_results_table($similar_results,$new_idea_id){
 
        	foreach($more_similar_docs as $doc){
 		$ratio = $doc["score"]/$score;
-		if($ratio>0.1) {
+		if($ratio>$required_ratio) {
 			$table .= "<tr>";
 			$table .= "<td>".$doc["title"]."</td>";
 			$table .= "<td>".$doc["text_description"]."</td>";
