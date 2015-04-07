@@ -57,9 +57,10 @@ function get_similar_results_table($similar_results,$new_idea_id){
 		if($ratio>0.5) {
 			$table .= "<tr>";
 			$table .= "<td>".$doc["title"]."</td>";
-			$table .= "<td>".$doc["text_description"]."</td>";
-			$table .= "<td>".$doc["score"]."</td>";
-			$table .= "<td>".$ratio."</td>";
+			$trim_description = substr($doc["text_description"],0,125);
+			$table .= '<td align="left">'.$trim_description."..."."</td>";
+			$table .= "<td>".round($doc["score"],2)."</td>";
+			$table .= "<td>".round($ratio,2)."</td>";
 			$table .= "</tr>";
 		}
 	}
