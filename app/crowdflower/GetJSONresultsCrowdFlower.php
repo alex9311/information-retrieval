@@ -1,5 +1,6 @@
 <?php include "../common/connect.php";?>
 <?php
+	echo "here we are";
 	// Create connection 
 	$conn = connect_db(); 
 	// Convert JSON object to php associative array 

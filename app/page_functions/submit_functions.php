@@ -1,19 +1,13 @@
 <?php
-
-include "lucene_functions.php";
-
-
-insert_idea("freshness","the freshaest","");
-exit();
+include "../common/connect.php";
+include "../common/database_functions.php";
 
 
-//this file handles new ideas being submitted 
-if($_POST['formSubmit'] == "Check for Duplicates"){
 
-}
 
 //only want to execute all these checks if we have a submission request
-if($_POST['formSubmit'] == "Submit"){	
+//if($_POST['formSubmit'] == "Submit"){	
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 	if(strcmp("",$_FILES["fileToUpload"]["name"])!=0){
 		//first figure out where the image will be stored and get file type
 		$target_dir = "/var/www/html/uploads/";
@@ -72,6 +66,7 @@ if($_POST['formSubmit'] == "Submit"){
 
 function insert_idea($title,$valueText,$image_location){
 	$conn =  connect_db();
+				echo "here i am";
 	//create query string from parameters
 	$clean_title=mysqli_real_escape_string($conn,$title);
 	$clean_valueText=mysqli_real_escape_string($conn,$valueText);

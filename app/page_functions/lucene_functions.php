@@ -34,13 +34,11 @@ function get_similar_results_table($similar_results,$new_idea_id){
 	$score = $similar_results["moreLikeThis"][$new_idea_id]["docs"][0]["score"];
 	$return_header = true;
 	$required_score = 0.15;
-	foreach($more_similar_docs as $doc){
-                if($score>$required_ratio) {
-                        $return_header = false;
-                }
-        }
+      	if((float)$score>$required_score) {
+       		$return_header = false;
+	}
 	if(empty($more_similar_docs) || $return_header){
-		return '<h4 align="center">Your idea is completely unique!</h4>';
+		return'<h4 align="center">Your idea is completely unique!</h4>';
 	}
 	$table = "";
        	$table .= '<h4 align="center">Ideas Similar</h4>';

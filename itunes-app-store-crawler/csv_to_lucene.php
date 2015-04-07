@@ -10,6 +10,8 @@ while(! feof($input_file)){
 	add_idea_lucene($id,$description,$title);
 	$id = $id+1;
 }
+$angry_birds_description = "Use the unique powers of the Angry Birds to destroy the greedy pigs' defenses!   The survival of the Angry Birds is at stake. Dish out revenge on the greedy pigs who stole their eggs. Use the unique powers of each bird to destroy the pigs’ defenses. Angry Birds features challenging physics-based gameplay and hours of replay value. Each level requires logic skill and force to solve.  If you get stuck in the game you can purchase the Mighty Eagle! Mighty Eagle is a one-time in-app purchase in Angry Birds that gives unlimited use. This phenomenal creature will soar from the skies to wreak havoc and smash the pesky pigs into oblivion. There’s just one catch: you can only use the aid of Mighty Eagle to pass a level once per hour. Mighty Eagle also includes all new gameplay goals and achievements!   In addition to the Mighty Eagle Angry Birds now has power-ups! Boost your birds’ abilities and three-star levels to unlock secret content! Angry Birds now has the following amazing power-ups: Sling Scope for laser targeting King Sling for maximum flinging power Super Seeds to supersize your birds and Birdquake to shake pigs’ defenses to the ground!";
+add_idea_lucene($id,$angry_birds_description,"Angry Birds");
 fclose($input_file);
 
 function add_idea_lucene($id,$description,$title){
