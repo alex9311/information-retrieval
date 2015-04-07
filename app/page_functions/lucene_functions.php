@@ -96,10 +96,6 @@ function add_idea_lucene($id,$description,$title){
 
 function find_similar_ideas($id){
 	$url = "http://52.28.44.51:8983/solr/collection1/";
-<<<<<<< HEAD
-	//$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=text_description&mlt.fl=title&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=15&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
-=======
->>>>>>> lucene
 	$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=title,text_description&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=15&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
 	//$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=text_description&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=15&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
 	//$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=text_description&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=455&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
