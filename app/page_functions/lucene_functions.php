@@ -30,28 +30,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 function get_similar_results_table($similar_results,$new_idea_id){
-	$table = "";
-	if($similar_results["moreLikeThis"][$new_idea_id]["numFound"] != 0){
-		$more_similar_docs = $similar_results["moreLikeThis"][$new_idea_id]["docs"];
-		$table .= '<h4 align="center">Ideas Similar</h4>';
-		$table .= '<table  border="1" cellpadding="10"  id="top-5-table">';
-		$table .= "<tr>";
-        	$table .= "<td>Title</td>";
-        	$table .= "<td>Description</td>";
-        	$table .= "</tr>";
-		$highestscore = $similar_results["moreLikeThis"][$new_idea_id]["docs"][0]["score"];
-		foreach($more_similar_docs as $doc){
-			if($doc["score"]/$highestscore > 0.5){
-				$table .= "<tr>";
-				$table .= "<td>".$doc["title"]."</td>";
-				$table .= "<td>".$doc["text_description"]."</td>";
-				$table .= "</tr>";
-			}
-		}
-		$table .= "</table>";
-	}else{
-		$table = "You are a unique snowflake with wonderful original ideas!";
+       	$more_similar_docs = $similar_results["moreLikeThis"][$new_idea_id]["docs"];
+	$score = $similar_results["moreLikeThis"][$new_idea_id]["docs"][0]["score"];
+	$return_header = true;
+	$required_score = 0.15;
+	foreach($more_similar_docs as $doc){
+                if($score>$required_ratio) {
+                        $return_header = false;
+                }
+        }
+	if(empty($more_similar_docs) || $return_header){
+		return '<h4 align="center">Your idea is completely unique!</h4>';
 	}
+	$table = "";
+       	$table .= '<h4 align="center">Ideas Similar</h4>';
+       	$table .= '<table  border="1" cellpadding="10"  id="top-5-table">';
+	$table .= "<tr>";
+        $table .= "<td><b>Title</b></td>";
+        $table .= "<td><b>Description</b></td>";
+        $table .= "<td><b>Score</b></td>";
+        $table .= "<td><b>Ratio</b></td>";
+        $table .= "</tr>";
+
+       	foreach($more_similar_docs as $doc){
+		$ratio = $doc["score"]/$score;
+		if($ratio>0.5) {
+			$table .= "<tr>";
+			$table .= "<td>".$doc["title"]."</td>";
+			$trim_description = substr($doc["text_description"],0,125);
+			$table .= '<td align="left">'.$trim_description."..."."</td>";
+			$table .= "<td>".round($doc["score"],2)."</td>";
+			$table .= "<td>".round($ratio,2)."</td>";
+			$table .= "</tr>";
+		}
+	}
+	$table .= "</table>";
        	
 	return $table;
 }
