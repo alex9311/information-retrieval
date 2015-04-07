@@ -46,10 +46,10 @@ function get_similar_results_table($similar_results,$new_idea_id){
        	$table .= '<h4 align="center">Ideas Similar</h4>';
        	$table .= '<table  border="1" cellpadding="10"  id="top-5-table">';
 	$table .= "<tr>";
-        $table .= "<td>Title</td>";
-        $table .= "<td>Description</td>";
-        $table .= "<td>Score</td>";
-        $table .= "<td>Ratio</td>";
+        $table .= "<td><b>Title</b></td>";
+        $table .= "<td><b>Description</b></td>";
+        $table .= "<td><b>Score</b></td>";
+        $table .= "<td><b>Ratio</b></td>";
         $table .= "</tr>";
 
        	foreach($more_similar_docs as $doc){
@@ -63,7 +63,8 @@ function get_similar_results_table($similar_results,$new_idea_id){
 			$table .= "</tr>";
 		}
 	}
-       	$table .= "</table>";
+	$table .= "</table>";
+       	
 	return $table;
 }
 
@@ -95,7 +96,10 @@ function add_idea_lucene($id,$description,$title){
 
 function find_similar_ideas($id){
 	$url = "http://52.28.44.51:8983/solr/collection1/";
+<<<<<<< HEAD
 	//$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=text_description&mlt.fl=title&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=15&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
+=======
+>>>>>>> lucene
 	$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=title,text_description&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=15&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
 	//$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=text_description&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=15&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
 	//$query = "select?q=id:".$id."&mlt=true&mlt.count=5&mlt.fl=text_description&mlt.mintf=1&mlt.mindf=1&mlt.minwl=1&mlt.maxwl=455&mlt.maxqt=1000&mlt.maxntp=100000&wt=json&rows=100&fl=*,score";
