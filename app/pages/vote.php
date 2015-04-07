@@ -28,10 +28,10 @@
             <div id="vote_buttons" style="text-align:center;">
               <div class="ui buttons">
         
-                <a href="http://54.93.120.201/alex/project/app/pages/vote.php?previous_id=<?php echo $idea["id"]; ?>&upvote_id=<?php echo $idea["id"];?>">
+                <a href="<?php echo $app_directory;?>/pages/vote.php?previous_id=<?php echo $idea["id"]; ?>&upvote_id=<?php echo $idea["id"];?>">
 		  <img src="<?php echo $app_directory.'/images/sparkit_button.png';?>">
 		</a>
-                <a href="http://54.93.120.201/alex/project/app/pages/vote.php?previous_id=<?php echo $idea["id"]; ?>">
+                <a href="<?php echo $app_directory;?>/pages/vote.php?previous_id=<?php echo $idea["id"]; ?>">
 		  <img src="<?php echo $app_directory.'/images/next_button.png';?>">
 		</a>
             </div>

@@ -1,17 +1,9 @@
 ##Project Idea Document - Group 2
 ####Pitch/Introduction
-<<<<<<< HEAD
-Ever had a GREAT application idea? A lot of us had an idea for the next Facebook or Twitter, when you wake up, are traveling or even in late night sessions. But you did not have the time, money or expertise to grow this idea to its full potential. We have the solution for you: get it Sparked!. The idea is all about ideas and provides the user opportunities to gain some financial gains from their brilliant ideas, even though they have no profiency in programming. 
 
-Interestingly, at the same time it is a market research tool at the same time, as it tracks and ranks popularity of the submitted ideas. Prototypes of the best ranked ideas will be developed and pitched to potential buyers or investors.Sparked will be an application that uses Crowd Sourcing, Human Computation and Information Retrieval to find the gems among the vast amount of ideas that users come up with. 
-
-## scope? 
-
-=======
 Ever had a GREAT application idea? A lot of us have had an idea for the next Facebook or Twitter, when you wake up, are traveling or even in late night sessions. But you did not have the time, money or expertise to grow this idea to its full potential. We have the solution for you: get it Sparked! The idea is all about ideas and provides the user opportunities to obtain some financial gains from their brilliant ideas, even though they have no proficiency in programming. 
 
 Interestingly, it is a market research tool at the same time, as it tracks and ranks the submitted ideas based on popularity. Prototypes of the best ranked ideas will be developed and pitched to potential buyers or investors. Sparked will be an application that uses Crowdsourcing, Human Computation and Information Retrieval to find the gems among the vast amount of ideas that users come up with. The focus during this course will be the first parts of the application; starting from the idea submission to the ranking of the ideas. The business part of Sparked will not be developed during the coming weeks.
->>>>>>> 8d0ec1bd0be5e8478a19601716cc91b381389287
 
 
 ####Relevance to Course

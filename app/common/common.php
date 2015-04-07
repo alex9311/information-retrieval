@@ -28,8 +28,6 @@ echo '
                         <link rel="stylesheet" href="'.$library_directory.'/css/style-desktop.css" />
 		</noscript>
                 <link rel="stylesheet" href="'.$library_directory.'/css/votingPage.css" />
-                <link rel="stylesheet" href="'.$library_directory.'/sui/semantic.css" />
-                <script src="'.$library_directory.'/sui/semantic.js"></script>
                 <!--[if lte IE 8]><link rel="stylesheet" href="'.$library_directory.'/css/ie/v8.css" /><![endif]-->
         </head>
 ';

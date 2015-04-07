@@ -24,21 +24,28 @@
           ?>
 	    <div id="submitting">
               <h2 style="margin-left:.25em; margin-top: .25em;" align="center">Submit an idea now!</h2>
-              <form action="../page_functions/submit_functions.php" method="post" enctype="multipart/form-data">
+              <form  method="post" enctype="multipart/form-data">
 	        <p>
-		    <label> Title </label>
-		    <input type="text" name="title" style="max-width:700px;display: block;margin-left: auto;margin-right: auto;">
-	            <label> Description of Idea </label>
-	            <textarea name="text_description" maxlength="1000" style="max-width:700px;display: block;margin-left: auto;margin-right: auto;"></textarea>
-            	    <label> Select image to upload: </label>
-            	    <input type="file" name="fileToUpload" id="fileToUpload">          				
+		    <b>Title: </b><input id="form_idea_title" type="text" name="title" style="max-width:700px;display: block;margin-left: auto;margin-right: auto;">
+	            <b> Description of Idea:</b>
+	            <textarea id="form_idea_description" name="text_description" maxlength="1000" style="max-width:700px;display: block;margin-left: auto;margin-right: auto;"></textarea>
+            	    <b>Select image to upload:</b> <input type="file" name="fileToUpload" id="fileToUpload">          				
 	          </p>
-		  <p>
-		    <input type="submit" name="formSubmit" value="Submit">
-	          </p>
+			<button class="submit_buttons"  type="button" name="camper" onclick="check_duplicates()">Check for Duplicates</button>
+			<div id="duplicates"><br></div>
+			<button class="submit_buttons" type="submit" name="camper" formaction="../page_functions/submit_functions.php">Submit</button>
                 </form>
 	      </div>	 
-
+	<script>
+		function check_duplicates(){
+			var idea_title = document.getElementById("form_idea_title").value;
+			var idea_description = document.getElementById("form_idea_description").value;
+			$.post( "../page_functions/lucene_functions.php", { title: idea_title, description: idea_description })
+  				.done(function( data ) {
+					document.getElementById("duplicates").innerHTML = data;
+  				});
+		}	
+	</script>
         </div><!--content-->
     </div><!--main_wrapper-->
   </body>
