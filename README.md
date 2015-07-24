@@ -19,11 +19,11 @@ Human computation is the idea of using human beings to complete tasks rather tha
 TODO
 
 ####Contents of Repo
-| Directory | Link | Description |
-|-----------|------|-------------|
-| app       |      | This is where the Sparked app lives. It is a simplistic responsive PHP web app. |
-| database  |      | This is where the scripts used to manage the Sparked MySQL database live. Using these scripts, developers can wipe the database or repopulate it with a given CSV file. The database can also be easily exported to CSV format here. |
-| documents |      | This directory contains all of the documents created for the purpose of our course. This includes our "project idea document" and our final presentation slideshow. |
-| evaluation-similarity-check |      | When developing the application, we weren't sure what tool we wanted to use for our similarity checker. This directory contains the work we did and code used to evaluate Dandelion, Lucene, and RapidMiner. |
-| itunes-app-store-crawler    |      | This directory contains an iTunes web crawler we used and modified for our purposes. We used this application data to test our search functionality. |
+| Directory | Description |
+|-----------|------------|
+| [app](app)| This is where the Sparked app lives. It is a simplistic responsive PHP web app. |
+| [database](database)| This is where the scripts used to manage the Sparked MySQL database live. Using these scripts, developers can wipe the database or repopulate it with a given CSV file. The database can also be easily exported to CSV format here. |
+| [documents](documents) | This directory contains all of the documents created for the purpose of our course. This includes our "project idea document" and our final presentation slideshow. |
+| [evaluation-similarity-check](evaluation-similarity-check) | When developing the application, we weren't sure what tool we wanted to use for our similarity checker. This directory contains the work we did and code used to evaluate Dandelion, Lucene, and RapidMiner. |
+| [itunes-app-store-crawler](itunes-app-store-crawler) | This directory contains an iTunes web crawler we used and modified for our purposes. We used this application data to test our search functionality. |
 
