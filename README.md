@@ -15,7 +15,7 @@ Crowdsourcing is also used to find the best ideas in the submissions. Users can 
 Human computation is the idea of using human beings to complete tasks rather than using software. In our application, we use human computation to check the images associated with the ideas submitted by the crowd. New ideas are not allowed into the "upvotable pool" until they have been checked. The ideas are sent to a Crowdflower job through a cURL request. Once the idea is checked, a response is sent back to the Sparked server to mark the idea as acceptable or unacceptable.
 
 ######Retrieval of Relevant Information
-Since the course is called "Information Retrieval", we need to include an information retrieval component in our application. We used a "[more like this](https://wiki.apache.org/solr/MoreLikeThis)" query to allow users to see if ideas similar to their already exist in the database.
+Since the course is called *Information Retrieval*, we need to include an information retrieval component in our application. We used a "[more like this](https://wiki.apache.org/solr/MoreLikeThis)" query to allow users to see if ideas similar to their already exist in the database.
 
 ###User Interface at a Glance
 The interface is fully responsive thanks to the [html template](http://html5up.net/verti) we used. 
@@ -34,6 +34,7 @@ Once this is done, you can set up the database by running the [reset script](dat
 php database/resetdb.php
 ```
 This will set up the following schema in your database
+
 <img src='documents/sql_schema.png' width="250"/>
 
 If you like, you can now populate the DB with some toy data. 
