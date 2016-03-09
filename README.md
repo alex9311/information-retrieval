@@ -44,7 +44,7 @@ This will set up the following schema in your database
 If you like, you can now populate the DB with some toy data. 
 
 #####SOLR Database
-
+TODO - this is complicated
 
 ###Contents of Repo
 | Directory | Description |
