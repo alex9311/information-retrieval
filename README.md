@@ -19,11 +19,11 @@ The interface is fully responsive thanks to the [html template](http://html5up.n
 
 The homepage shows users where to submit new ideas or vote on existing ones.
 
-<img src='documents/screenshots/homepage.png' width="350"/>
+<img src='documents/screenshots/homepage.png' width="350" border="5"/>
 
 The submission page has a few fields and allows for image uploading.
 
-<img src='documents/screenshots/submission.png' width="350"/>
+<img src='documents/screenshots/submission.png' width="350" border="5"/>
 
 ###Deploying
 Clone the repository in your web directory
