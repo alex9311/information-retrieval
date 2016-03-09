@@ -1,5 +1,4 @@
 <?php
-include "../common/connect.php";
 include "../common/database_functions.php";
 
 

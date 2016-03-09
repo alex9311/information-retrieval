@@ -1,15 +1,9 @@
 <?php
-$app_directory = get_app_directory();
-function get_app_directory(){
-        $pos =  strpos(getcwd(),"app");
-        $length = abs($pos+3-13);
-        $app_directory =  substr(getcwd(),13,$length);
-        return $app_directory;
-}
+$app_directory = "/Information-Retrieval/app"; 
 
 function print_imports($app_directory){
 	$library_directory = $app_directory."/libraries/html5up-verti";
-echo '
+	echo '
         <head>
                 <title>Sparked! Spark your ideas</title>
                 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -30,8 +24,9 @@ echo '
                 <link rel="stylesheet" href="'.$library_directory.'/css/votingPage.css" />
                 <!--[if lte IE 8]><link rel="stylesheet" href="'.$library_directory.'/css/ie/v8.css" /><![endif]-->
         </head>
-';
+	';
 }
+
 function print_header($app_directory){
 echo '
     <div id="header-wrapper">

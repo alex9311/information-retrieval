@@ -1,24 +1,47 @@
-###Information Retrieval Group Project - Sparked
+##Information Retrieval Group Project - Sparked
 TU Delft, Masters Software Technology, Information Retrieval, 3rd Quarter 2015
 
-####Application Summary
+###Application Summary
 In this assignment, our group built the application "Sparked". The idea of Sparked is to crowdsource ideas for mobile applications. The application would generate the applications most desired by the crowd with the idea that the applications could then be created and sold.
 
 This assignment was meant to showcase the use of the following three topics in practice:
 
-#####Crowdsourcing
+######Crowdsourcing
 Crowdsourcing is the backbone of the Sparked application. We use the crowd to submit new mobile ideas. Users can submit ideas with a title, description, and image. Ideas are submitted through a PHP form and stored in a MySQL database.
 
 Crowdsourcing is also used to find the best ideas in the submissions. Users can browse through ideas and upvote or downvote them as they go.
 
-#####Human Computation
+######Human Computation
 Human computation is the idea of using human beings to complete tasks rather than using software. In our application, we use human computation to check the images associated with the ideas submitted by the crowd. New ideas are not allowed into the "upvotable pool" until they have been checked. The ideas are sent to a Crowdflower job through a cURL request. Once the idea is checked, a response is sent back to the Sparked server to mark the idea as acceptable or unacceptable.
 
+######Retrieval of Relevant Information
+Since the course is called "Information Retrieval", we need to include an information retrieval component in our application. We used a "[more like this](https://wiki.apache.org/solr/MoreLikeThis)" query to allow users to see if ideas similar to their already exist in the database.
 
-#####Retrieval of Relevant Information
-TODO
+###User Interface at a Glance
+The interface is fully responsive thanks to the [html template](http://html5up.net/verti) we used. 
+###Deploying
+Clone the repository in your web directory
 
-####Contents of Repo
+```
+git clone https://github.com/alex9311/Information-Retrieval.git
+````
+#####MySQL Database
+You will need a SQL server and existing DB to connect to. Your credentials should be put in the [database/db_creds.php](database/db_creds.php) file.
+
+Once this is done, you can set up the database by running the [reset script](database/resetdb.php) with
+
+```
+php database/resetdb.php
+```
+This will set up the following schema in your database
+<img src='documents/sql_schema.png' width="250"/>
+
+If you like, you can now populate the DB with some toy data. 
+
+#####SOLR Database
+
+
+###Contents of Repo
 | Directory | Description |
 |-----------|------------|
 | [app](app)| This is where the Sparked app lives. It is a simplistic responsive PHP web app. |

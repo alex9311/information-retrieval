@@ -1,10 +1,6 @@
 <?php
 include "database_fields.php";
-$app_dir_name = "project";
-$app_pos = strpos(__FILE__, $app_dir_name);
-$path_to_dir= substr(__FILE__,0,$app_pos);
-include $path_to_dir."../db_creds.php";
-
+include "db_creds.php";
 
 print("Are you sure you want to reset the database? Type yes if you do\n");
 $answer = fgets(STDIN);

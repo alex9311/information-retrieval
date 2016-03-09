@@ -1,6 +1,6 @@
 <?php
 
-include "../common/connect.php";
+include "../common/database_functions.php";
 
 //add_idea_lucene("3","fresh2","2test fresh");
 //find_similar_ideas("3");
