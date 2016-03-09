@@ -14,6 +14,15 @@ This assignment was meant to showcase the use of three relevant technologies: **
 
 ###User Interface at a Glance
 The interface is fully responsive thanks to the [html template](http://html5up.net/verti) we used. 
+
+The homepage shows users where to submit new ideas or vote on existing ones.
+
+<img src='documents/screenshots/homepage.png' width="350"/>
+
+The submission page has a few fields and allows for image uploading.
+
+<img src='documents/screenshots/submission.png' width="350"/>
+
 ###Deploying
 Clone the repository in your web directory
 
@@ -30,7 +39,7 @@ php database/resetdb.php
 ```
 This will set up the following schema in your database
 
-<img src='documents/sql_schema.png' width="250"/>
+<img src='documents/sql_schema.png' width="300"/>
 
 If you like, you can now populate the DB with some toy data. 
 
