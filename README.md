@@ -37,11 +37,9 @@ Once this is done, you can set up the database by running the [reset script](dat
 ```
 php database/resetdb.php
 ```
-This will set up the following schema in your database
+This will set up the [Sparked schema](documents/sql_schema.png) in your database.
 
-<img src='documents/sql_schema.png' width="300"/>
-
-If you like, you can now populate the DB with some toy data. 
+You can now populate the DB with some toy data. 
 
 #####SOLR Database
 TODO - this is complicated
