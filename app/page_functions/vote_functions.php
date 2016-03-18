@@ -37,7 +37,8 @@ function get_idea($previous_idea_id,$app_directory){
 }
 
 function print_idea_for_vote($idea){
-	echo '<img class="ui large image vote_image" src="'.substr($idea["image"],13).'">';
+	//echo '<img class="ui large image vote_image" src="'.substr($idea["image"],13).'">';
+	echo '<img class="ui large image vote_image" src="'.$idea["image"].'">';
 	echo '<div class="ui large header" id="text">'.$idea["title"].'</div>';
 	echo '<div class="vote_descrip_text"><p>'.$idea["text_description"].'</p></div>';
 }

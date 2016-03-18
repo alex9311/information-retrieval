@@ -1,10 +1,6 @@
 <?php
 function add_ideas_from_csv_full_mock($filename){
-	$app_dir_name = "project";
-	$app_pos = strpos(__FILE__, $app_dir_name);
-	$path_to_dir= substr(__FILE__,0,$app_pos);
-        $target_dir = $path_to_dir."../demo_uploads/csv_files/";
-
+        $target_dir = $path_to_dir."toy_data/";
 	$handle = fopen($target_dir.$filename, "r");
 
 	$headers = fgetcsv($handle, 5000, ",");

@@ -30,7 +30,7 @@
 <form action="repopulate.php" method="post">
 	<select  name='csv_file'>
 	<?php
-	$files = array_map("htmlspecialchars", scandir("/var/www/html/demo_uploads/csv_files"));
+	$files = array_map("htmlspecialchars", scandir("toy_data"));
 
 	foreach ($files as $file){
 		echo $file;
