@@ -14,6 +14,11 @@ This assignment was meant to showcase the use of three relevant technologies: **
 | Human Computation   | Human computation is the idea of using human beings to complete tasks rather than using software. Here we use human computation through [CrowdFlower](http://www.crowdflower.com/) to check user-submitted images. CURL requests are used to send information between crowdflower and our application.  | 
 | Information Retrieval | Since the course is called *Information Retrieval*, we need to include an information retrieval component in our application. We used a "[more like this](https://wiki.apache.org/solr/MoreLikeThis)" query to allow users to see if ideas similar to their already exist in the the itunes app store. We crawled the itunes app store and imported the data into our own SOLR db. | 
 
+These aspects come together in the application diagram shown here
+
+<img src='documents/app_diagram.png' width="500"/>
+
+
 ###User Interface at a Glance
 The interface is fully responsive thanks to the [html template](http://html5up.net/verti) we used. 
 
