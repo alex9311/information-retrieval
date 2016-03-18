@@ -12,7 +12,7 @@ This assignment was meant to showcase the use of three relevant technologies: **
 | ------ |:------------------| 
 | Crowdsourcing |Crowdsourcing is the backbone of the Sparked application. We use the crowd to submit new mobile ideas. Users can submit ideas with a title, description, and image. Ideas are submitted through a PHP form and stored in a MySQL database. Crowdsourcing is also used to find the best ideas in the submissions. Users can browse through ideas and upvote or downvote them as they go. | 
 | Human Computation   | Human computation is the idea of using human beings to complete tasks rather than using software. Here we use human computation through [CrowdFlower](http://www.crowdflower.com/) to check user-submitted images. CURL requests are used to send information between crowdflower and our application.  | 
-| Information Retrieval | Since the course is called *Information Retrieval*, we need to include an information retrieval component in our application. We used a "[more like this](https://wiki.apache.org/solr/MoreLikeThis)" query to allow users to see if ideas similar to their already exist in the database.| 
+| Information Retrieval | Since the course is called *Information Retrieval*, we need to include an information retrieval component in our application. We used a "[more like this](https://wiki.apache.org/solr/MoreLikeThis)" query to allow users to see if ideas similar to their already exist in the the itunes app store. We crawled the itunes app store and imported the data into our own SOLR db. | 
 
 ###User Interface at a Glance
 The interface is fully responsive thanks to the [html template](http://html5up.net/verti) we used. 
