@@ -1,9 +1,9 @@
 <img src='app/images/sparked_horizontal.png' width="350"/>
 
-##Information Retrieval Group Project - Sparked
+## Information Retrieval Group Project - Sparked
 TU Delft, Masters Software Technology, Information Retrieval, 3rd Quarter 2015
 
-###Application Summary
+### Application Summary
 In this assignment, our group built the application "Sparked". The purpose of Sparked is to **crowdsource ideas for mobile applications**. The application would generate the applications most desired by the crowd with the idea that the applications could then be created and sold.
 
 This assignment was meant to showcase the use of three relevant technologies: **crowdsourcing, human computation, and information retrieval**
@@ -19,7 +19,7 @@ These aspects come together in the application diagram shown here
 <img src='documents/app_diagram.png' width="500"/>
 
 
-###User Interface at a Glance
+### User Interface at a Glance
 The interface is fully responsive thanks to the [html template](http://html5up.net/verti) we used. 
 
 The homepage shows users where to submit new ideas or vote on existing ones.
@@ -30,13 +30,13 @@ The submission page has a few fields and allows for image uploading.
 
 <img src='documents/screenshots/submission.png' width="350" border="5"/>
 
-###Deploying
+### Deploying
 Clone the repository in your web directory
 
 ```
 git clone https://github.com/alex9311/Information-Retrieval.git
 ````
-#####MySQL Database
+##### MySQL Database
 You will need a SQL server and existing DB to connect to. Your credentials should be put in the [database/db_creds.php](database/db_creds.php) file.
 
 Once this is done, you can set up the database by running the [reset script](database/resetdb.php) with
@@ -48,10 +48,10 @@ This will set up the [Sparked schema](documents/sql_schema.png) in your database
 
 You can now populate the DB with some toy data. 
 
-#####SOLR Database
+##### SOLR Database
 TODO - this is complicated
 
-###Contents of Repo
+### Contents of Repo
 | Directory | Description |
 |-----------|------------|
 | [app](app)| This is where the Sparked app lives. It is a simplistic responsive PHP web app. |
